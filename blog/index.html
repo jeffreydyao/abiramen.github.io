@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>My home computing setup</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog yet, so I threw a statically hosted page together with Bootstrap for now.</div>
+            <h1>My CSE home computing setup</h1>
+            <p>Someone requested me to write up how I've set up for home computing, so here we go. I've posted here rather than Ed just so this can be reused easily in the future.<br>Not all of this may be relevant to you - I suspect that most people only want to set up VSCode to use SSH, and perhaps set up an SSH keypair.</p>
+            <div class="card"><div class="card-body">
+                <h5 class="card-title">Summary</h5>
+                I work across two devices. I use SSH via VSCode if I want to work on the CSE machines, or I use the Windows Subsystem for Linux (WSL) if I want to work on my local machine, especially if I'm on a bus or a train. I use a GitHub repository to sync code between my two devices and the CSE machine.
+            </div></div>
+            <h2>Working on CSE machines over SSH with VSCode</h2>
+            <p>This should be applicable to people across all operating systems. However, if you're on macOS, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
+            <ol>
+                <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a href="https://code.visualstudio.com/download">here.</a></li>
+                <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
+                <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to reload the window.</li>
+            </ol>
+            <div class="alert alert-info">If you're not using Windows 10, or haven't updated since 2018.</div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
