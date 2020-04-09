@@ -287,14 +287,23 @@ int main(void) {
             - if you don't, and realise too late, you'll have to deal with resolving what's called a merge conflict.</p>
         <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a>
         </p>
-        <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines</h2>
+        <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines with VSCode</h2>
         <div class="alert alert-info">These instructions are written for Windows 10. I don't know how this works for
             macOS, but if you do know how, contact me and I'll add your instructions, and give you an acknowledgement!
         </div>
+        <p>Following these instructions will mean you won't be asked for a password each time you open an SSH window,
+            but will still leave you secure.
+        </p>
+        <h4>Part 1: Generate a keypair</h4>
         <ol>
             <li><strong>Open the Windows Command Prompt.</strong> You can do this by entering cmd in Search.</li>
-            <li><strong>Generate a keypair.</strong> Use the command <code>ssh-keygen -</code></li>
+            <li><strong>Generate a keypair.</strong> Use the command <code>ssh-keygen -t rsa -b 4096</code>.</li>
+            <li><strong>You'll be asked where you want to save the key.</strong> Leave this blank, and press <kbd>Enter</kbd>.</li>
+            <li>You'll be asked to set a password.</strong> Setting a password would defeat the purpose of generating the keypair.
+                Leave this blank, and press <kbd>Enter</kbd> again. Do the same when you are asked to confirm it.</li>
         </ol>
+        <p>Windows has now generated two files: id_rsa and id_rsa.pub</p>
+        <h4>Using the keypair</h4>
         <h2 id="ssh-git">Using SSH keypairs to push to GitHub</h2>
         <h2>Acknowledgements</h2>
         <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a
