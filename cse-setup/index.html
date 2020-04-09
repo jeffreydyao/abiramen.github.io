@@ -21,6 +21,9 @@
                 border-radius: 5px;
             }
             code {color:#ff62b6;}
+            .alert{
+                margin-top: 5px;
+            }
             h2, h3, h4 {margin-top: 5px;}
         </style>
     </head>
@@ -98,7 +101,17 @@
                     <pre>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</pre>
                     If you are prompted to restart your computer, do so.
                 </li>
+                <li><strong>Open the Microsoft Store.</strong> You can again do this using Windows Search.</li>
+                <li><strong>Search for Ubuntu and install it.</strong> Ubuntu currently has the best support for WSL.</li>
+                <li><strong>Once installed, open Ubuntu.</strong> You can do this by using <kbd>Win+R</kbd> and typing in <code>bash</code>. Once you do this, a terminal should open!</li>
+                <li><strong>You'll be guided through setting up an account.</strong> Make sure you remember what password you use.</li>
+                <li><strong>We need to install a compiler.</strong> We'll be using gcc. You can use it just like dcc, but you'll get fewer error messages. To install, run the following command:
+                    <pre>sudo apt-get install build-essential</pre>
+                </li>
+                Enter your password when prompted.
             </ol>
+            <p>You should now be able to use the text based Linux commands you learn during the course, replacing dcc with gcc. (Note: If you've learnt about <code>dcc --leak-check</code>, it won't work with gcc.)<br>
+                If you use VSCode, you can use <code>code [filename]</code> to open a file. If you use Vim, Vim will work as normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
