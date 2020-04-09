@@ -1,124 +1,294 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="CSE Home Computing">
-        <meta property="og:image" content="img/vscode.jpg">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>My home computing setup</title>
-        <style>
-            body{
-                background: #191919;
-                color: #eee;
-            }
-            .card{
-                background: black;
-            }
-            li {
-                margin: 5px;
-            }
-            pre {
-                background: #333;
-                color: #eee;
-                padding: 10px;
-                border-radius: 5px;
-            }
-            code {color:#ff62b6;}
-            .alert{
-                margin-top: 5px;
-            }
-            .alert-info {background-color: #0c5460; color: #d1ecf1;}
-            h2, h3, h4 {margin-top: 5px;}
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog yet, so I threw a statically hosted page together with Bootstrap for now.</div>
-            <h1>My CSE home computing setup</h1>
-            <p>Someone requested me to write up how I've set up for home computing, so here we go. I've posted here rather than Ed just so this can be reused easily in the future.<br>Not all of this may be relevant to you - I suspect that most people only want to set up VSCode to use SSH, and perhaps set up an SSH keypair.<br>
-            If you're not doing a CSE degree, a lot of this won't be worth it. However, if you are, you're inevitably going to be doing some of this eventually, and you'll be able to use your setup for the next few years.</p>
-            <div class="card"><div class="card-body">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="CSE Home Computing">
+    <meta property="og:image" content="img/vscode.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>My home computing setup</title>
+    <style>
+        body {
+            background: #191919;
+            color: #eee;
+        }
+
+        .card {
+            background: black;
+        }
+
+        li {
+            margin: 5px;
+        }
+
+        pre {
+            background: #333;
+            color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            color: #ff62b6;
+        }
+
+        .alert {
+            margin-top: 5px;
+        }
+
+        .alert-info {
+            background-color: #0c5460;
+            color: #d1ecf1;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
+            yet, so I threw a statically hosted page together with Bootstrap for now.</div>
+        <h1>My CSE home computing setup</h1>
+        <p>Someone requested me to write up how I've set up for home computing, so here we go. I've posted here rather
+            than Ed just so this can be reused easily in the future.<br>Not all of this may be relevant to you - I
+            suspect that most people only want to set up VSCode to use SSH, and perhaps set up an SSH keypair.<br>
+            If you're not doing a CSE degree, a lot of this won't be worth it. However, if you are, you're inevitably
+            going to be doing some of this eventually, and you'll be able to use your setup for the next few years.</p>
+        <div class="card">
+            <div class="card-body">
                 <h5 class="card-title">Summary</h5>
-                I work across two devices. I use SSH via VSCode if I want to work on the CSE machines, or I use the Windows Subsystem for Linux (WSL) if I want to work on my local machine, especially if I'm on a bus or a train. I use a GitHub repository to sync code between my two devices and the CSE machine.
-            </div></div>
-            <h2>Working on CSE machines over SSH with VSCode</h2>
-            <p>This should be applicable to people across all operating systems. However, if you're on macOS, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
-            <ol>
-                <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a href="https://code.visualstudio.com/download">here.</a></li>
-                <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
-                <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to reload the window.</li>
-                <li>
-                    <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img src="img/ssh-icon.jpg" alt="SSH icon"/> in the bottom left. The menu should look like this:<br>
-                    <img style ="max-width:100%" src="img/ssh-menu.jpg" alt="SSH menu"/>
-                </li>
-                <li>
-                    <strong>Click Connect to Host.</strong> In the field that shows up, type in <code>z5555555@cse.unsw.edu.au</code>, using your zID instead. Hit <kbd>Enter</kbd>. A new window will open. If asked for a platform, select Linux. Enter your password when prompted. If your password is wrong, you will prompted to 
-                    retry. Once you've done that, you should be connected successfully!
-                    <ul>
-                        <li>Use <kbd>Ctrl+O</kbd> to open a file.</li>
-                        <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window. </li>
-                    </ul>
-                </li>
-                <li><strong>We can save some time by adding this to our hosts list.</strong> Click the SSH icon in the bottom left again, click <strong></strong>Connect to Host, and this time, click Add New SSH Host.</li>
-                <li><strong>Enter the following command: </strong><code>ssh z5555555@cse.unsw.edu.au -A</code>, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, use the first one.</li>
-                <li>
-                    <strong>You should now see cse.unsw.edu.au on the Connect to Host menu.</strong> Now you don't have to type it in each time.
-                    <img style ="max-width:100%" src="img/ssh-menu-2.jpg" alt="SSH menu"/>
-                </li>
-                <li>If you want to avoid having to enter your password each time, scroll down to <a href="#">Using SSH keypairs</a>.</li>
-            </ol>
-            <h3>Other useful VSCode stuff</h3>
-            <img style ="max-width:100%" src="img/vscode.jpg" alt="My VSCode over SSH"/>
-            <h4>Editor rulers</h4>
-            <p>The COMP1511 style guide requires you to make sure your lines aren't longer than 80 characters (and it's good practice to do so!). You can make VSCode show you a handy
-                little ruler to make sure your lines aren't too long.
-            </p>
-            <ol>
-                <li><strong>Open the settings.json file.</strong> To do this, press <kbd>Ctrl+Shift+P</kbd> and search for <strong>Open Settings (JSON).</strong> A file should open.</li>
-                <li>
-                    <strong>We need to add to this file.</strong> You should see that the last line is a curly brace like this: <code>}</code>. What we want to do is add a comma to
+                I work across two devices. I use SSH via VSCode if I want to work on the CSE machines, or I use the
+                Windows Subsystem for Linux (WSL) if I want to work on my local machine, especially if I'm on a bus or a
+                train. I use a GitHub repository to sync code between my two devices and the CSE machine.
+            </div>
+        </div>
+        <h2>Working on CSE machines over SSH with VSCode</h2>
+        <p>This should be applicable to people across all operating systems. However, if you're on macOS, use
+            <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
+        <ol>
+            <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a target="_blank"
+                    rel="noopener noreferrer" href="https://code.visualstudio.com/download">here.</a></li>
+            <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
+            <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also
+                install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to
+                reload the window.</li>
+            <li>
+                <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img
+                    src="img/ssh-icon.jpg" alt="SSH icon" /> in the bottom left. The menu should look like this:<br>
+                <img style="max-width:100%" src="img/ssh-menu.jpg" alt="SSH menu" />
+            </li>
+            <li>
+                <strong>Click Connect to Host.</strong> In the field that shows up, type in
+                <code>z5555555@cse.unsw.edu.au</code>, using your zID instead. Hit <kbd>Enter</kbd>. A new window will
+                open. If asked for a platform, select Linux. Enter your password when prompted. If your password is
+                wrong, you will prompted to
+                retry. Once you've done that, you should be connected successfully!
+                <ul>
+                    <li>Use <kbd>Ctrl+O</kbd> to open a file.</li>
+                    <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>We can save some time by adding this to our hosts list.</strong> Click the SSH icon in the
+                bottom left again, click <strong></strong>Connect to Host, and this time, click Add New SSH Host.</li>
+            <li><strong>Enter the following command: </strong><code>ssh z5555555@cse.unsw.edu.au -A</code>, replacing
+                with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, use
+                the first one.</li>
+            <li>
+                <strong>You should now see cse.unsw.edu.au on the Connect to Host menu.</strong> Now you don't have to
+                type it in each time.
+                <img style="max-width:100%" src="img/ssh-menu-2.jpg" alt="SSH menu" />
+            </li>
+            <li>If you want to avoid having to enter your password each time, scroll down to <a href="#">Using SSH
+                    keypairs</a>.</li>
+        </ol>
+        <h3>Other useful VSCode stuff</h3>
+        <img style="max-width:100%" src="img/vscode.jpg" alt="My VSCode over SSH" />
+        <h4>Editor rulers</h4>
+        <p>The COMP1511 style guide requires you to make sure your lines aren't longer than 80 characters (and it's good
+            practice to do so!). You can make VSCode show you a handy
+            little ruler to make sure your lines aren't too long.
+        </p>
+        <ol>
+            <li><strong>Open the settings.json file.</strong> To do this, press <kbd>Ctrl+Shift+P</kbd> and search for
+                <strong>Open Settings (JSON).</strong> A file should open.</li>
+            <li>
+                <strong>We need to add to this file.</strong> You should see that the last line is a curly brace like
+                this: <code>}</code>. What we want to do is add a comma to
                 the second last line. Then, we create a new line after the comma, and paste this:
-<pre>
-"[c]" :{
+<pre>"[c]" :{
     "editor.rulers" : [
         80
     ]
 }</pre>
-                </li>
-            </ol>
-            <h4>Extensions</h4>
-            <p>VSCode has heaps of themes and extensions. Some which I use:</p>
-            <ul>
-                <li><strong>C/C++ Snippets.</strong> Occasionally saves time with suggestions.</li>
-                <li><strong>Material Icon Theme.</strong></li>
-                <li><strong>Dainty and Dainty - Material Theme.</strong> I personally use Dainty - Material Theme Ocean.</li>
-                <li><strong>Discord Rich Presence.</strong> If you use Discord, then it'll update your currently playing status with details of what you're coding on.
-                If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them that you're busy working :P</li>
-            </ul>
-            <h2>Working remotely: Using WSL</h2>
-            <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't work.</div>
-            <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily use a lot of the Linux commands and scripting 
-                which are taught in CSE degrees, and easily compile and run our code without connecting to CSE computers, even if we have no internet connection.</p>
-            <ol>
-                <li><strong>Open PowerShell.</strong> Type in PowerShell into Windows Search, right click on the result and click <strong>Run as administrator</strong>. Select Yes if a prompt shows up.</li>
-                <li><strong>Run the following command:</strong>
-                    <pre>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</pre>
-                    If you are prompted to restart your computer, do so.
-                </li>
-                <li><strong>Open the Microsoft Store.</strong> You can again do this using Windows Search.</li>
-                <li><strong>Search for Ubuntu and install it.</strong> Ubuntu currently has the best support for WSL.</li>
-                <li><strong>Once installed, open Ubuntu.</strong> You can do this by using <kbd>Win+R</kbd> and typing in <code>bash</code>. Once you do this, a terminal should open!</li>
-                <li><strong>You'll be guided through setting up an account.</strong> Make sure you remember what password you use.</li>
-                <li><strong>We need to install a compiler.</strong> We'll be using gcc. You can use it just like dcc, but you'll get fewer error messages. To install, run the following command:
-                    <pre>sudo apt-get install build-essential</pre>
-                </li>
-                Enter your password when prompted.
-            </ol>
-            <p>You should now be able to use the text based Linux commands you learn during the course, replacing dcc with gcc. (Note: If you've learnt about <code>dcc --leak-check</code>, it won't work with gcc.)<br>
-                If you use VSCode, you can use <code>code [filename]</code> to open a file. If you use Vim, Vim will work as normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+            </li>
+        </ol>
+        <h4>Extensions</h4>
+        <p>VSCode has heaps of themes and extensions. Some which I use:</p>
+        <ul>
+            <li><strong>C/C++ Snippets.</strong> Occasionally saves time with suggestions.</li>
+            <li><strong>Material Icon Theme.</strong></li>
+            <li><strong>Dainty and Dainty - Material Theme.</strong> I personally use Dainty - Material Theme Ocean.
+            </li>
+            <li><strong>Discord Rich Presence.</strong> If you use Discord, then it'll update your currently playing
+                status with details of what you're coding on.
+                If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them
+                that you're busy working :P</li>
+        </ul>
+        <h2 id = "wsl">Working remotely: Using WSL</h2>
+        <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't
+            work.</div>
+        <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily
+            use a lot of the Linux commands and scripting
+            which are taught in CSE degrees, and easily compile and run our code without connecting to CSE computers,
+            even if we have no internet connection.</p>
+        <ol>
+            <li><strong>Open PowerShell.</strong> Type in PowerShell into Windows Search, right click on the result and
+                click <strong>Run as administrator</strong>. Select Yes if a prompt shows up.</li>
+            <li><strong>Run the following command:</strong>
+                <pre>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</pre>
+                If you are prompted to restart your computer, do so.
+            </li>
+            <li><strong>Open the Microsoft Store.</strong> You can again do this using Windows Search.</li>
+            <li><strong>Search for Ubuntu and install it.</strong> Ubuntu currently has the best support for WSL.</li>
+            <li><strong>Once installed, open Ubuntu.</strong> You can do this by opening Search and typing in
+                <code>bash</code>. Once you do this, a terminal should open!</li>
+            <li><strong>You'll be guided through setting up an account.</strong> Make sure you remember what password
+                you use.</li>
+            <li><strong>We need to install a compiler.</strong> We'll be using gcc. You can use it just like dcc, but
+                you'll get fewer error messages. To install, run the following command:
+                <pre>sudo apt-get install build-essential</pre>
+            </li>
+            Enter your password when prompted.
+            <li><strong>Run the following command to make sure everything is up to date.</strong>
+                <pre>sudo apt update && sudo apt upgrade</pre>
+            </li>
+        </ol>
+        <p>You should now be able to use the text based Linux commands you learn during the course, replacing dcc with
+            gcc. (Note: If you've learnt about <code>dcc --leak-check</code>, it won't work with gcc.)<br>
+            If you use VSCode, you can use <code>code [filename]</code> to open a file. If you use Vim, Vim will work as
+            normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
+        <h2 id = "wt">Very optional but very cool: Installing Windows Terminal</h2>
+        <p>This part is very very optional, but installs <a target="_blank" rel="noopener noreferrer"
+                href="https://www.youtube.com/watch?v=8gw0rXPMMPE">Windows Terminal</a>, which allows you to access cmd,
+            powershell and bash in one place, open multiple terminals, and most importantly, use themes!</p>
+        <img style="max-width:100%" src="img/wt.jpg" alt="Windows Terminal" />
+        <div class="alert alert-info">You need to be on at least Windows 10 version 1909 for this to work. You can check
+            your Windows version by opening Search and entering <code>winver</code>.
+            If you're really really bothered and want to update Windows, go <a target="_blank" rel="noopener noreferrer"
+                href="https://support.microsoft.com/en-au/help/3159635/windows-10-update-assistant">here</a>.</div>
+        <ol>
+            <li><strong>Open the Microsoft Store.</strong></li>
+            <li><strong>Search for Windows Terminal and install it.</strong> Once installed, you can open it by entering
+                <code>wt</code> or searching Windows Terminal in Search.</li>
+            <li><strong>If you want, you can adjust settings.</strong> If you know how to read a JSON file, use
+                <kbd>Ctrl+,</kbd> to access settings. You can even find themes <a target="_blank"
+                    rel="noopener noreferrer" href="">here</a>.</li>
+        </ol>
+        <h2 id = "git-github">Setting up Git and GitHub</h2>
+        Git is a really useful tool which allows you backup your code, revert to older versions, keep track of changes,
+        update and pull your code from multiple devices,
+        and provides several tools to allow you to work collaboratively. This is called version control.
+        <h3>Signing up for GitHub</h3>
+        <p><em>Every</em> developer has a GitHub account. GitHub provides servers for you to host your code, using Git.
+        </p>
+        <ol>
+            <li><strong>Sign up for GitHub <a href="https://github.com/join">here</a>.</strong> This shouldn't take more
+                than a minute</li>
+            <li><strong>Get free GitHub Pro!</strong> GitHub Pro is really handy, as you get to make your code private,
+                which is important, because you don't want to publish your assignment code. Thankfully, <strong>students
+                    can get this, as well as heaps of other useful tools for free</strong>.
+                Visit <a href="https://education.github.com/pack">education.github.com</a> to sign up! (If you fail to
+                get GitHub Pro, you can create private Git repositories using Atlassian BitBucket - read more into this
+                on Google.)</li>
+            <li><strong>Follow someone on GitHub for the first time!</strong> You can score bonus points by <abbr
+                    title="Obviously me creating this website was just to get GitHub followers :P">following me</abbr>
+                <a href="https://github.com/abiramen/">here</a> :)</li>
+            <li><strong>Create your first repository <a href="https://github.com/new">here</a>.</strong> Think of a
+                repository (or repo for short) as somewhere you store all your code for a project. Perhaps call your
+                repo hello-world.</li>
+        </ol>
+        <h3>Installing Git</h3>
+        <p>If you're working on VLab, or with the CSE machines over SSH, Git is already installed on these machines!
+            Otherwise, you'll need to install Git.</p>
+        <h5>For Linux and WSL:</h5>
+        Run <code>sudo apt-get install git</code> from your terminal.
+        <h5>For Windows and macOS:</h5>
+        <p>Download Git from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>, and follow the
+            instructions to install.</p>
+        <h4>Setting up Git on each machine</h4>
+        <ol>
+            <li><strong>Telling Git your name. </strong>Run <code>git config --global user.name "yourusername"</code> - I
+                usually just use my GitHub username here.</li>
+            <li><strong>Telling Git your email. </strong>Run <code>git config --global user.email
+                    "name@example.com"</code> - I usually use the private GitHub email ending with
+                @users.noreply.github.com,
+                which can be found <a href="https://github.com/settings/emails">here</a> under 'Keep email addresses
+                private'.</li>
+        </ol>
+        <h3>Making use of our new repo</h3>
+        <p>Now, we want to make use of our repo, and push code to it.</p>
+        <ol>
+            <li><strong>Create a folder </strong> called HelloWorld somewhere on your computer.</li>
+            <li><strong>Open a terminal</strong> and use <code>cd</code> until you're in your new folder.</li>
+            <li><strong>Initialise a <em>local</em> repository</strong> using the command <code>git init</code>. This
+                means you've set up a repository within your own computer, which tracks changes.</li>
+            <li>
+                <strong>Make a hello_world.c file in the folder.</strong>
+                Here's some code for you to steal.
+<pre>
+#include &lt;stdio.h&gt;
+int main(void) {
+    printf("Hello world!");
+    return 0;
+}
+</pre>
+            </li>
+            <li><strong>Run <code>git add hello_world.c</code>.</strong> This tells git that you want the file to be
+                included in the next update. If you ever have multiple files that you want to update, use
+                <code>git add --all</code>.</li>
+            <li><strong>Run <code>git commit -m "Initialise repository"</code>.</strong> This keeps track of the update,
+                noting what changes you've made, and stores it on the <em>local copy of the repository</em>. Your commit
+                message should always describe the changes you've made (in present tense!).</li>
+            <li><strong>Now, we want to sync our local repository with our remote repository on GitHub.</strong> The
+            first time we do this, we have to tell git where our remote repository is. We do this with
+            <code>git remote add origin https://github.com/your-username/your-repo-name.git</code></li>
+            <li><strong>We can finally push the change to our remote repository.</strong> Use <code>git push origin master</code>.</li>
+        </ol>
+        <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br>Note that git will
+        ask for your GitHub password each time you push. We can avoid this by <a href="#">setting up an SSH keypair</a>, which you 
+        can scroll down to read about.</p>
+        <h3>Using git to work across multiple computers</h3>
+        <p> can make a copy of our hello-world repository on another computer using 
+        <code>git clone https://github.com/your-username/your-repo-name.git</code>. This sets up a new local repository with the contents
+        from the remote repository. Now, we can work on our code on this new computer, and use <code>git add</code>, <code>git push</code>
+        and <code>git commit</code> to update our GitHub repository just like before. Now, when we return to our original computer, we run
+        <code>git pull</code> to fetch updates from the remote repository. as soon as we start. This is <strong>very important</strong> to do
+        - if you don't, and realise too late, you'll have to deal with resolving what's called a merge conflict.</p>
+        <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script>
+        $('a').click(function() {
+            $cont.animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 750);
+        })
+    </script>
+</body>
+
 </html>
