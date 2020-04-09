@@ -105,7 +105,8 @@
                 type it in each time.
                 <img style="max-width:100%" src="img/ssh-menu-2.jpg" alt="SSH menu" />
             </li>
-            <li>If you want to avoid having to enter your password each time, scroll down to <a href="#">Using SSH
+            <li>If you want to avoid having to enter your password each time, scroll down to <a href="#ssh-git">Using
+                    SSH
                     keypairs</a>.</li>
         </ol>
         <h3>Other useful VSCode stuff</h3>
@@ -122,7 +123,7 @@
                 <strong>We need to add to this file.</strong> You should see that the last line is a curly brace like
                 this: <code>}</code>. What we want to do is add a comma to
                 the second last line. Then, we create a new line after the comma, and paste this:
-<pre>"[c]" :{
+                <pre>"[c]" :{
     "editor.rulers" : [
         80
     ]
@@ -141,7 +142,7 @@
                 If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them
                 that you're busy working :P</li>
         </ul>
-        <h2 id = "wsl">Working remotely: Using WSL</h2>
+        <h2 id="wsl">Working remotely: Using WSL</h2>
         <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't
             work.</div>
         <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily
@@ -174,7 +175,7 @@
             gcc. (Note: If you've learnt about <code>dcc --leak-check</code>, it won't work with gcc.)<br>
             If you use VSCode, you can use <code>code [filename]</code> to open a file. If you use Vim, Vim will work as
             normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
-        <h2 id = "wt">Very optional but very cool: Installing Windows Terminal</h2>
+        <h2 id="wt">Very optional but very cool: Installing Windows Terminal</h2>
         <p>This part is very very optional, but installs <a target="_blank" rel="noopener noreferrer"
                 href="https://www.youtube.com/watch?v=8gw0rXPMMPE">Windows Terminal</a>, which allows you to access cmd,
             powershell and bash in one place, open multiple terminals, and most importantly, use themes!</p>
@@ -191,7 +192,7 @@
                 <kbd>Ctrl+,</kbd> to access settings. You can even find themes <a target="_blank"
                     rel="noopener noreferrer" href="">here</a>.</li>
         </ol>
-        <h2 id = "git-github">Setting up Git and GitHub</h2>
+        <h2 id="git-github">Setting up Git and GitHub</h2>
         Git is a really useful tool which allows you backup your code, revert to older versions, keep track of changes,
         update and pull your code from multiple devices,
         and provides several tools to allow you to work collaboratively. This is called version control.
@@ -199,18 +200,21 @@
         <p><em>Every</em> developer has a GitHub account. GitHub provides servers for you to host your code, using Git.
         </p>
         <ol>
-            <li><strong>Sign up for GitHub <a href="https://github.com/join">here</a>.</strong> This shouldn't take more
-                than a minute</li>
+            <li><strong>Sign up for GitHub <a target="_blank" rel="noopener noreferrer"
+                        href="https://github.com/join">here</a>.</strong>
+                This shouldn't take more than a minute</li>
             <li><strong>Get free GitHub Pro!</strong> GitHub Pro is really handy, as you get to make your code private,
                 which is important, because you don't want to publish your assignment code. Thankfully, <strong>students
                     can get this, as well as heaps of other useful tools for free</strong>.
-                Visit <a href="https://education.github.com/pack">education.github.com</a> to sign up! (If you fail to
+                Visit <a href="https://education.github.com/pack" target="_blank"
+                    rel="noopener noreferrer">education.github.com</a> to sign up! (If you fail to
                 get GitHub Pro, you can create private Git repositories using Atlassian BitBucket - read more into this
                 on Google.)</li>
             <li><strong>Follow someone on GitHub for the first time!</strong> You can score bonus points by <abbr
                     title="Obviously me creating this website was just to get GitHub followers :P">following me</abbr>
-                <a href="https://github.com/abiramen/">here</a> :)</li>
-            <li><strong>Create your first repository <a href="https://github.com/new">here</a>.</strong> Think of a
+                <a href="https://github.com/abiramen/" target="_blank" rel="noopener noreferrer">here</a> :)</li>
+            <li><strong>Create your first repository <a href="https://github.com/new" target="_blank"
+                        rel="noopener noreferrer">here</a>.</strong> Think of a
                 repository (or repo for short) as somewhere you store all your code for a project. Perhaps call your
                 repo hello-world.</li>
         </ol>
@@ -220,16 +224,19 @@
         <h5>For Linux and WSL:</h5>
         Run <code>sudo apt-get install git</code> from your terminal.
         <h5>For Windows and macOS:</h5>
-        <p>Download Git from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>, and follow the
+        <p>Download Git from <a target="_blank" rel="noopener noreferrer"
+                href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>, and follow the
             instructions to install.</p>
         <h4>Setting up Git on each machine</h4>
         <ol>
-            <li><strong>Telling Git your name. </strong>Run <code>git config --global user.name "yourusername"</code> - I
+            <li><strong>Telling Git your name. </strong>Run <code>git config --global user.name "yourusername"</code> -
+                I
                 usually just use my GitHub username here.</li>
             <li><strong>Telling Git your email. </strong>Run <code>git config --global user.email
                     "name@example.com"</code> - I usually use the private GitHub email ending with
                 @users.noreply.github.com,
-                which can be found <a href="https://github.com/settings/emails">here</a> under 'Keep email addresses
+                which can be found <a target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/settings/emails">here</a> under 'Keep email addresses
                 private'.</li>
         </ol>
         <h3>Making use of our new repo</h3>
@@ -242,7 +249,7 @@
             <li>
                 <strong>Make a hello_world.c file in the folder.</strong>
                 Here's some code for you to steal.
-<pre>
+                <pre>
 #include &lt;stdio.h&gt;
 int main(void) {
     printf("Hello world!");
@@ -257,21 +264,34 @@ int main(void) {
                 noting what changes you've made, and stores it on the <em>local copy of the repository</em>. Your commit
                 message should always describe the changes you've made (in present tense!).</li>
             <li><strong>Now, we want to sync our local repository with our remote repository on GitHub.</strong> The
-            first time we do this, we have to tell git where our remote repository is. We do this with
-            <code>git remote add origin https://github.com/your-username/your-repo-name.git</code></li>
-            <li><strong>We can finally push the change to our remote repository.</strong> Use <code>git push origin master</code>.</li>
+                first time we do this, we have to tell git where our remote repository is. We do this with
+                <code>git remote add origin https://github.com/your-username/your-repo-name.git</code></li>
+            <li><strong>We can finally push the change to our remote repository.</strong> Use <code>git push origin
+                    master</code>.</li>
         </ol>
-        <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br>Note that git will
-        ask for your GitHub password each time you push. We can avoid this by <a href="#">setting up an SSH keypair</a>, which you 
-        can scroll down to read about.</p>
+        <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br>Note that
+            git will
+            ask for your GitHub password each time you push. We can avoid this by <a href="#ssh-git">setting up an SSH
+                keypair</a>, which you
+            can scroll down to read about.</p>
         <h3>Using git to work across multiple computers</h3>
-        <p> can make a copy of our hello-world repository on another computer using 
-        <code>git clone https://github.com/your-username/your-repo-name.git</code>. This sets up a new local repository with the contents
-        from the remote repository. Now, we can work on our code on this new computer, and use <code>git add</code>, <code>git push</code>
-        and <code>git commit</code> to update our GitHub repository just like before. Now, when we return to our original computer, we run
-        <code>git pull</code> to fetch updates from the remote repository. as soon as we start. This is <strong>very important</strong> to do
-        - if you don't, and realise too late, you'll have to deal with resolving what's called a merge conflict.</p>
-        <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a></p>
+        <p> can make a copy of our hello-world repository on another computer using
+            <code>git clone https://github.com/your-username/your-repo-name.git</code>. This sets up a new local
+            repository with the contents
+            from the remote repository. Now, we can work on our code on this new computer, and use <code>git add</code>,
+            <code>git push</code>
+            and <code>git commit</code> to update our GitHub repository just like before. Now, when we return to our
+            original computer, we run
+            <code>git pull</code> to fetch updates from the remote repository. as soon as we start. This is <strong>very
+                important</strong> to do
+            - if you don't, and realise too late, you'll have to deal with resolving what's called a merge conflict.</p>
+        <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a>
+        </p>
+        <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines</h2>
+        <h2 id="ssh-git">Using SSH keypairs to push to GitHub</h2>
+        <h2>Acknowledgements</h2>
+        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a href="https://github.com/ralismark">ralismark</a>
+        for looking over this and providing suggestions.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -283,9 +303,9 @@ int main(void) {
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script>
-        $('a').click(function() {
+        $('a').click(function () {
             $cont.animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
+                scrollTop: $($.attr(this, 'href')).offset().top
             }, 750);
         })
     </script>
