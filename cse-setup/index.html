@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>My home computing setup</title>
+        <style>
+            body{
+                background: #111111;
+                color: white;
+            }
+            .card{
+                background: black;
+            }
+            li {
+                margin: 5px;
+            }
+            pre {
+                background: #eee;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            code {color:#ff62b6;}
+            h2, h3, h4 {margin-top: 5px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog yet, so I threw a statically hosted page together with Bootstrap for now.</div>
+            <h1>My CSE home computing setup</h1>
+            <p>Someone requested me to write up how I've set up for home computing, so here we go. I've posted here rather than Ed just so this can be reused easily in the future.<br>Not all of this may be relevant to you - I suspect that most people only want to set up VSCode to use SSH, and perhaps set up an SSH keypair.<br>
+            If you're not doing a CSE degree, a lot of this won't be worth it. However, if you are, you're inevitably going to be doing some of this eventually, and you'll be able to use your setup for the next few years.</p>
+            <div class="card"><div class="card-body">
+                <h5 class="card-title">Summary</h5>
+                I work across two devices. I use SSH via VSCode if I want to work on the CSE machines, or I use the Windows Subsystem for Linux (WSL) if I want to work on my local machine, especially if I'm on a bus or a train. I use a GitHub repository to sync code between my two devices and the CSE machine.
+            </div></div>
+            <h2>Working on CSE machines over SSH with VSCode</h2>
+            <p>This should be applicable to people across all operating systems. However, if you're on macOS, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
+            <ol>
+                <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a href="https://code.visualstudio.com/download">here.</a></li>
+                <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
+                <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to reload the window.</li>
+                <li>
+                    <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img src="img/ssh-icon.jpg" alt="SSH icon"/> in the bottom left. The menu should look like this:<br>
+                    <img style ="max-width:100%" src="img/ssh-menu.jpg" alt="SSH menu"/>
+                </li>
+                <li>
+                    <strong>Click Connect to Host.</strong> In the field that shows up, type in <code>z5555555@cse.unsw.edu.au</code>, using your zID instead. Hit <kbd>Enter</kbd>. A new window will open. If asked for a platform, select Linux. Enter your password when prompted. If your password is wrong, you will prompted to 
+                    retry. Once you've done that, you should be connected successfully!
+                    <ul>
+                        <li>Use <kbd>Ctrl+O</kbd> to open a file.</li>
+                        <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window. </li>
+                    </ul>
+                </li>
+                <li><strong>We can save some time by adding this to our hosts list.</strong> Click the SSH icon in the bottom left again, click <strong></strong>Connect to Host, and this time, click Add New SSH Host.</li>
+                <li><strong>Enter the following command: </strong><code>ssh z5555555@cse.unsw.edu.au -A</code>, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, use the first one.</li>
+                <li>
+                    <strong>You should now see cse.unsw.edu.au on the Connect to Host menu.</strong> Now you don't have to type it in each time.
+                    <img style ="max-width:100%" src="img/ssh-menu-2.jpg" alt="SSH menu"/>
+                </li>
+                <li>If you want to avoid having to enter your password each time, scroll down to <a href="#">Using SSH keypairs</a>.</li>
+            </ol>
+            <h3>Other useful VSCode stuff</h3>
+            <img style ="max-width:100%" src="img/vscode.jpg" alt="My VSCode over SSH"/>
+            <h4>Editor rulers</h4>
+            <p>The COMP1511 style guide requires you to make sure your lines aren't longer than 80 characters (and it's good practice to do so!). You can make VSCode show you a handy
+                little ruler to make sure your lines aren't too long.
+            </p>
+            <ol>
+                <li><strong>Open the settings.json file.</strong> To do this, press <kbd>Ctrl+Shift+P</kbd> and search for <strong>Open Settings (JSON).</strong> A file should open.</li>
+                <li>
+                    <strong>We need to add to this file.</strong> You should see that the last line is a curly brace like this: <code>}</code>. What we want to do is add a comma to
+                the second last line. Then, we create a new line after the comma, and paste this:
+<pre>
+"[c]" :{
+    "editor.rulers" : [
+        80
+    ]
+}</pre>
+                </li>
+            </ol>
+            <h4>Extensions</h4>
+            <p>VSCode has heaps of themes and extensions. Some which I use:</p>
+            <ul>
+                <li><strong>C/C++ Snippets.</strong> Occasionally saves time with suggestions.</li>
+                <li><strong>Material Icon Theme.</strong></li>
+                <li><strong>Dainty and Dainty - Material Theme.</strong> I personally use Dainty - Material Theme Ocean.</li>
+                <li><strong>Discord Rich Presence.</strong> If you use Discord, then it'll update your currently playing status with details of what you're coding on.
+                If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them that you're busy working :P</li>
+            </ul>
+            <h2>Working remotely: Using WSL</h2>
+            <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't work.</div>
+            <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily use a lot of the Linux commands and scripting 
+                which are taught in CSE degrees, and easily compile and run our code without connecting to CSE computers, even if we have no internet connection.</p>
+            <ol>
+                <li><strong>Open PowerShell.</strong> Type in PowerShell into Windows Search, right click on the result and click <strong>Run as administrator</strong>. Select Yes if a prompt shows up.</li>
+                <li><strong>Run the following command:</strong>
+                    <pre>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</pre>
+                    If you are prompted to restart your computer, do so.
+                </li>
+            </ol>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
