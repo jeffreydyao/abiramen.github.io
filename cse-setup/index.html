@@ -275,7 +275,7 @@ int main(void) {
                 keypair</a>, which you
             can scroll down to read about.</p>
         <h3>Using git to work across multiple computers</h3>
-        <p> can make a copy of our hello-world repository on another computer using
+        <p>We can make a copy of our hello-world repository on another computer using
             <code>git clone https://github.com/your-username/your-repo-name.git</code>. This sets up a new local
             repository with the contents
             from the remote repository. Now, we can work on our code on this new computer, and use <code>git add</code>,
@@ -293,9 +293,10 @@ int main(void) {
         <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a href="https://github.com/ralismark">ralismark</a>
         for looking over this and providing suggestions.</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -303,11 +304,11 @@ int main(void) {
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script>
-        $('a').click(function () {
-            $cont.animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 750);
-        })
+        $('a').click(function(e) {
+            e.preventDefault();
+            var aid = $(this).attr("href");
+            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        });
     </script>
 </body>
 
