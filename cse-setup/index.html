@@ -105,7 +105,8 @@
                 type it in each time.
                 <img style="max-width:100%" src="img/ssh-menu-2.jpg" alt="SSH menu" />
             </li>
-            <li>If you want to avoid having to enter your password each time, scroll down to <a href="#ssh-git">Using
+            <li>If you want to avoid having to enter your password each time, scroll down to <a href="#ssh-git"
+                    class="page-anchor">Using
                     SSH
                     keypairs</a>.</li>
         </ol>
@@ -203,9 +204,8 @@
             <li><strong>Sign up for GitHub <a target="_blank" rel="noopener noreferrer"
                         href="https://github.com/join">here</a>.</strong>
                 This shouldn't take more than a minute</li>
-            <li><strong>Get free GitHub Pro!</strong> GitHub Pro is really handy, as you get to make your code private,
-                which is important, because you don't want to publish your assignment code. Thankfully, <strong>students
-                    can get this, as well as heaps of other useful tools for free</strong>.
+            <li><strong>Get the GitHub Education Pack!</strong> GitHub Education is really handy. Students
+                can get GitHub Pro, as well as heaps of other useful tools for free</strong>.
                 Visit <a href="https://education.github.com/pack" target="_blank"
                     rel="noopener noreferrer">education.github.com</a> to sign up! (If you fail to
                 get GitHub Pro, you can create private Git repositories using Atlassian BitBucket - read more into this
@@ -271,7 +271,8 @@ int main(void) {
         </ol>
         <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br>Note that
             git will
-            ask for your GitHub password each time you push. We can avoid this by <a href="#ssh-git">setting up an SSH
+            ask for your GitHub password each time you push. We can avoid this by <a href="#ssh-git"
+                class="page-anchor">setting up an SSH
                 keypair</a>, which you
             can scroll down to read about.</p>
         <h3>Using git to work across multiple computers</h3>
@@ -290,13 +291,12 @@ int main(void) {
         <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines</h2>
         <h2 id="ssh-git">Using SSH keypairs to push to GitHub</h2>
         <h2>Acknowledgements</h2>
-        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a href="https://github.com/ralismark">ralismark</a>
-        for looking over this and providing suggestions.</p>
+        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a
+                href="https://github.com/ralismark">ralismark</a>
+            for looking over this and providing suggestions.</p>
     </div>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -304,10 +304,12 @@ int main(void) {
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script>
-        $('a').click(function(e) {
+        $('.page-anchor').click(function (e) {
             e.preventDefault();
             var aid = $(this).attr("href");
-            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+            $('html,body').animate({
+                scrollTop: $(aid).offset().top
+            }, 'slow');
         });
     </script>
 </body>
