@@ -42,11 +42,12 @@
             color: #d1ecf1;
         }
 
-        h2,
+        h1, h2,
         h3,
         h4 {
-            margin-top: 5px;
+            margin-top: 10px;
         }
+        h1 {margin-bottom: 10px;}
     </style>
 </head>
 
@@ -63,16 +64,16 @@
             going to be doing some of this eventually, and you'll be able to use your setup for the next few years.</p>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Summary</h5>
-                I work across two Windows devices as well as the physical CSE computers. I use SSH via VSCode if I want
+                <h5 class="card-title">Summary (clicking links will take you to the relevant section)</h5>
+                I work across two Windows devices as well as the physical CSE computers. I use <a href = "#vsc" class="page-anchor">SSH via VSCode</a> if I want
                 to work on the CSE machines, or I use the
-                Windows Subsystem for Linux (WSL) if I want to work on my local machine, especially if I'm on a bus or a
-                train. I use a GitHub repository to sync code between my two devices and the CSE machine. I never need
+                <a href = "#wsl" class = "page-anchor">Windows Subsystem for Linux (WSL)</a> if I want to work on my local machine, especially if I'm on a bus or a
+                train. I use a <a href = "#git-github" class = "page-anchor">GitHub repository</a> to sync code between my two devices and the CSE machine. I never need
                 to
-                enter passwords because I use SSH-RSA keys.
+                enter passwords because I use <a href="#ssh-vsc" class = "page-anchor">SSH-RSA</a> keys.
             </div>
         </div>
-        <h2>Working on CSE machines over SSH with VSCode</h2>
+        <h2 id = "vsc">Working on CSE machines over SSH with VSCode</h2>
         <p>This should be applicable to people across all operating systems. However, if you're on macOS, use
             <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
         <ol>
@@ -95,7 +96,7 @@
                 retry. Once you've done that, you should be connected successfully!
                 <ul>
                     <li>Use <kbd>Ctrl+O</kbd> to open a file.</li>
-                    <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window.
+                    <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window. You can run <code>ls</code> to see your files!
                     </li>
                 </ul>
             </li>
@@ -147,6 +148,9 @@
                 If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them
                 that you're busy working :P</li>
         </ul>
+        <p>Remember that neither VLab or VNC work without a stable internet connection - if your train route has poor reception,
+            and you like to code on the train, the next section might be for you.
+        </p>
         <h2 id="wsl">Working remotely: Using WSL</h2>
         <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't
             work.</div>
@@ -378,7 +382,7 @@ Host cse.unsw.edu.au
                 generating
                 the keypair.
                 Leave this blank, and press <kbd>Enter</kbd> again. Do the same when you are asked to confirm it.</li>
-            <li><strong>In your Terminal as before</strong>, enter the command
+            <li><strong>In your Terminal</strong>, enter the command
                 <code>code ~/.ssh/id_rsa.pub</code>. This should open up a file in VSCode, starting with
                 ssh-rsa and followed
                 by a <abbr title="This actually represents extremely large number, which is used to form a mathematical lock. This is called RSA encryption,
@@ -408,12 +412,13 @@ Host cse.unsw.edu.au
         <img style="max-width:100%" src="img/ssh-repo.jpg" alt="SSH key for a repo" />
         <h2>Feedback, suggestions and improvements</h2>
         <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me on Facebook or
-            email me at <pre>z5308310 [at] unsw.edu.com.au</pre>
+            email me at<br><code>z5308310 [at] unsw.edu.com.au</code>
         </p>
         <h2>Acknowledgements</h2>
-        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a> and <a
+        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a href="https://github.com/adaluong">adaluong</a> and <a
                 href="https://github.com/ralismark">ralismark</a>
             for looking over this and providing suggestions.</p>
+        <h6>Last updated: 10 April 2020</h6>
         <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
             yet, so I threw a statically hosted page together with Bootstrap for now.</div>
     </div>
