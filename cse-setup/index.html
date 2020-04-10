@@ -172,7 +172,7 @@
             <li><strong>You'll be guided through setting up an account.</strong> Make sure you remember what password
                 you use.</li>
             <li><strong>We need to install a compiler.</strong> We'll be using gcc. You can use it just like dcc, but
-                you'll get fewer error messages. To install, run the following command:
+                you'll get less helpful error messages. To install, run the following command:
                 <pre>sudo apt-get install build-essential</pre>
             </li>
             Enter your password when prompted.
@@ -184,6 +184,20 @@
             gcc. (Note: If you've learnt about <code>dcc --leak-check</code>, it won't work with gcc.)<br>
             If you use VSCode, you can use <code>code [filename]</code> to open a file. If you use Vim, Vim will work as
             normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
+        <h4>Attempting to install dcc</h4>
+        <p>Your mileage may vary, but you can install dcc locally! Run the following commands:</p>
+        <ol><li><code>curl -L https://github.com/COMP1511UNSW/dcc/releases/download/2.6.4/dcc_2.6.4_all.deb -o /tmp/dcc_2.6.4_all.deb</code><br>curl is
+            a utility in Linux to download files from the internet. You may also see wget sometimes, which is very similar.
+        </li>
+        <li><code>sudo apt install /tmp/dcc_2.6.4_all.deb</code><br>This installs the package we just downloaded.</li>
+        <p>Now, try compiling and running a program. If this doesn't work, run the command<br>
+            <code>sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope;echo 1 >/proc/sys/vm/overcommit_memory"</code>,
+            but only do this <strong>if you really need to.</strong>
+        </p>
+        <p>Note that you should still follow the steps to install build-essential from earlier because it has a lot of other useful
+            tools.
+        </p>
+        </ol>
         <h2 id="wt">Very optional but very cool: Installing Windows Terminal</h2>
         <p>This part is very very optional, but installs <a target="_blank" rel="noopener noreferrer"
                 href="https://www.youtube.com/watch?v=8gw0rXPMMPE">Windows Terminal</a>, which allows you to access cmd,
@@ -417,7 +431,7 @@ Host cse.unsw.edu.au
         <h2>Acknowledgements</h2>
         <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a href="https://github.com/adaluong">adaluong</a> and <a
                 href="https://github.com/ralismark">ralismark</a>
-            for looking over this and providing suggestions.</p>
+            for looking over this and providing suggestions. Thanks to Tam Nguyen for suggesting I include dcc instructions.</p>
         <h6>Last updated: 10 April 2020</h6>
         <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
             yet, so I threw a statically hosted page together with Bootstrap for now.</div>
