@@ -42,12 +42,16 @@
             color: #d1ecf1;
         }
 
-        h1, h2,
+        h1,
+        h2,
         h3,
         h4 {
             margin-top: 10px;
         }
-        h1 {margin-bottom: 10px;}
+
+        h1 {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -65,15 +69,18 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Summary (clicking links will take you to the relevant section)</h5>
-                I work across two Windows devices as well as the physical CSE computers. I use <a href = "#vsc" class="page-anchor">SSH via VSCode</a> if I want
+                I work across two Windows devices as well as the physical CSE computers. I use <a href="#vsc"
+                    class="page-anchor">SSH via VSCode</a> if I want
                 to work on the CSE machines, or I use the
-                <a href = "#wsl" class = "page-anchor">Windows Subsystem for Linux (WSL)</a> if I want to work on my local machine, especially if I'm on a bus or a
-                train. I use a <a href = "#git-github" class = "page-anchor">GitHub repository</a> to sync code between my two devices and the CSE machine. I never need
+                <a href="#wsl" class="page-anchor">Windows Subsystem for Linux (WSL)</a> if I want to work on my local
+                machine, especially if I'm on a bus or a
+                train. I use a <a href="#git-github" class="page-anchor">GitHub repository</a> to sync code between my
+                two devices and the CSE machine. I never need
                 to
-                enter passwords because I use <a href="#ssh-vsc" class = "page-anchor">SSH-RSA</a> keys.
+                enter passwords because I use <a href="#ssh-vsc" class="page-anchor">SSH-RSA</a> keys.
             </div>
         </div>
-        <h2 id = "vsc">Working on CSE machines over SSH with VSCode</h2>
+        <h2 id="vsc">Working on CSE machines over SSH with VSCode</h2>
         <p>This should be applicable to people across all operating systems. However, if you're on macOS, use
             <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
         <ol>
@@ -96,7 +103,8 @@
                 retry. Once you've done that, you should be connected successfully!
                 <ul>
                     <li>Use <kbd>Ctrl+O</kbd> to open a file.</li>
-                    <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window. You can run <code>ls</code> to see your files!
+                    <li>Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal window.
+                        You can run <code>ls</code> to see your files!
                     </li>
                 </ul>
             </li>
@@ -148,7 +156,8 @@
                 If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them
                 that you're busy working :P</li>
         </ul>
-        <p>Remember that neither VLab or VNC work without a stable internet connection - if your train route has poor reception,
+        <p>Remember that neither VLab or VNC work without a stable internet connection - if your train route has poor
+            reception,
             and you like to code on the train, the next section might be for you.
         </p>
         <h2 id="wsl">Working remotely: Using WSL</h2>
@@ -186,17 +195,23 @@
             normal. However, gedit won't work. Google 'wsl x server' if you're really desperate to use it.</p>
         <h4>Attempting to install dcc</h4>
         <p>Your mileage may vary, but you can install dcc locally! Run the following commands:</p>
-        <ol><li><code>curl -L https://github.com/COMP1511UNSW/dcc/releases/download/2.6.4/dcc_2.6.4_all.deb -o /tmp/dcc_2.6.4_all.deb</code><br>curl is
-            a utility in Linux to download files from the internet. You may also see wget sometimes, which is very similar.
-        </li>
-        <li><code>sudo apt install /tmp/dcc_2.6.4_all.deb</code><br>This installs the package we just downloaded.</li>
-        <p>Now, try compiling and running a program. If this doesn't work, run the command<br>
-            <code>sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope;echo 1 >/proc/sys/vm/overcommit_memory"</code>,
-            but only do this <strong>if you really need to.</strong>
-        </p>
-        <p>Note that you should still follow the steps to install build-essential from earlier because it has a lot of other useful
-            tools.
-        </p>
+        <ol>
+            <li><code>curl -L https://github.com/COMP1511UNSW/dcc/releases/download/2.6.4/dcc_2.6.4_all.deb -o
+                    /tmp/dcc_2.6.4_all.deb</code><br>curl is
+                a utility in Linux to download files from the internet. You may also see wget sometimes, which is very
+                similar.
+            </li>
+            <li><code>sudo apt install /tmp/dcc_2.6.4_all.deb</code><br>This installs the package we just downloaded.
+            </li>
+            <p>Now, try compiling and running a program. If this doesn't work, run the command<br>
+                <code>sudo bash -c "echo 0 > /proc/sys/kernel/yama/ptrace_scope;echo 1
+                    >/proc/sys/vm/overcommit_memory"</code>,
+                but only do this <strong>if you really need to.</strong>
+            </p>
+            <p>Note that you should still follow the steps to install build-essential from earlier because it has a lot
+                of other useful
+                tools.
+            </p>
         </ol>
         <h2 id="wt">Very optional but very cool: Installing Windows Terminal</h2>
         <p>This part is very very optional, but installs <a target="_blank" rel="noopener noreferrer"
@@ -292,7 +307,9 @@ int main(void) {
             <li><strong>We can finally push the change to our remote repository.</strong> Use <code>git push origin
                     master</code>.</li>
         </ol>
-        <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br>Note that
+        <p>You should now see your hello_world.c file at https://github.com/your-username/your-repo-name!<br> You should
+            always commit and push your code whenever you've
+            made a notable change, so that you can revert your code if you ever have problems later on. Note that
             git will
             ask for your GitHub password each time you push. We can avoid this by <a href="#ssh-git"
                 class="page-anchor">setting up an SSH
@@ -425,14 +442,16 @@ Host cse.unsw.edu.au
         </p>
         <img style="max-width:100%" src="img/ssh-repo.jpg" alt="SSH key for a repo" />
         <h2>Feedback, suggestions and improvements</h2>
-        <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me on Facebook or
+        <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me
+            on Facebook or
             email me at<br><code>z5308310 [at] unsw.edu.au</code>
         </p>
         <h2>Acknowledgements</h2>
-        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a href="https://github.com/adaluong">adaluong</a> and <a
-                href="https://github.com/ralismark">ralismark</a>
-            for looking over this and providing suggestions. Thanks to Tam Nguyen for suggesting I include dcc instructions.</p>
-        <h6>Last updated: 10 April 2020</h6>
+        <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a
+                href="https://github.com/adaluong">adaluong</a> and <a href="https://github.com/ralismark">ralismark</a>
+            for looking over this and providing suggestions. Thanks to Tam Nguyen for suggesting I include dcc
+            instructions.</p>
+        <h6>Last updated: 11 April 2020</h6>
         <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
             yet, so I threw a statically hosted page together with Bootstrap for now.</div>
     </div>
