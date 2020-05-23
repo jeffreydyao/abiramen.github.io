@@ -58,18 +58,18 @@
 <body>
     <div class="container">
         <h1>CSE home computing setup</h1>
-        <p>Someone requested me to write up how I've set up for home computing, so here we go. I've posted here rather
-            than Ed just so this can be reused easily in the future. Doing everything here should take about 30 minutes,
-            but will be worth it
-            if you're a CSE student.
-            <br>Not all of this may be relevant to you - I
-            suspect that most people only want to set up VSCode to use SSH, and perhaps set up an SSH keypair.<br>
-            If you're not doing a CSE degree, the other stuff won't be worth it. However, if you are, you're inevitably
-            going to be doing some of this eventually, and you'll be able to use your setup for the next few years.</p>
+        <p>I wrote this up back during 20T1, but uploaded it to my website to hopefully help students that are new to
+            CSE courses :)
+            <br>Not all of this may be that helpful to you if the only CSE course you ever intend to take is COMP1511 - I
+            suspect that most people will only need to set up VSCode to use SSH.<br><br>
+            However if you are planning to do more COMP courses in the future (especially if you're doing a CSE degree
+            or DataSci), you're inevitably
+            going to be doing some of this eventually, and you'll be able to make use of your setup for the next few
+            years!</p>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Summary (clicking links will take you to the relevant section)</h5>
-                I work across two Windows devices as well as the physical CSE computers. I use <a href="#vsc"
+                I work across two of my own computers as well as the physical CSE computers. I use <a href="#vsc"
                     class="page-anchor">SSH via VSCode</a> if I want
                 to work on the CSE machines, or I use the
                 <a href="#wsl" class="page-anchor">Windows Subsystem for Linux (WSL)</a> if I want to work on my local
@@ -83,6 +83,18 @@
         <h2 id="vsc">Working on CSE machines over SSH with VSCode</h2>
         <p>This should be applicable to people across all operating systems. However, if you're on macOS, use
             <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
+        <h4>Yeah, but what's this SSH thing you speak of?</h4>
+        <p>In your first week of COMP1511, you may have been introduced to something called <a
+                href="https://taggi.cse.unsw.edu.au/FAQ/Really_quick_guide_to_VLAB/" target="_blank"
+                rel="noopener noreferrer">VLAB</a>, which lets you connect to the School of CSE's computing servers over
+            a visual interface (or 'GUI'). However, this can often feel less efficient, and may also be affected by
+            compression and other latency issues if your <abbr
+                title="I'm looking at you, Vodafone-4G-on-the-T1-Western-line.">internet connection isn't great</abbr>.
+            Thankfully, some cool computer scientists created a protocol called SSH (short for Secure Shell), allowing
+            you to communicate with remote computers over the terminal. Visual Studio Code, a really popular <abbr
+                title="A text editor is a tool which allows you to edit the contents of file, such as a C file. You may have used gedit already!">text
+                editor</abbr>, uses SSH to let you edit files on other computers, such as the CSE computers.</p>
+        <h4>Sounds epic, how do I set it up?</h4>
         <ol>
             <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a target="_blank"
                     rel="noopener noreferrer" href="https://code.visualstudio.com/download">here.</a></li>
@@ -123,10 +135,10 @@
                     SSH
                     keypairs</a>.</li>
         </ol>
-        <h3>Other useful VSCode stuff</h3>
+        <h3>Other cool VSCode things</h3>
         <img style="max-width:100%" src="img/vscode.jpg" alt="My VSCode over SSH" />
         <h4>Editor rulers</h4>
-        <p>The COMP1511 style guide requires you to make sure your lines aren't longer than 80 characters (and it's good
+        <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and it's good
             practice to do so!). You can make VSCode show you a handy
             little ruler to make sure your lines aren't too long.
         </p>
@@ -156,17 +168,17 @@
                 If one of your friends tries to drag you into a voice call, you can just open up VSCode and tell them
                 that you're busy working :P</li>
         </ul>
-        <p>Remember that neither VLab or VNC work without a stable internet connection - if your train route has poor
+        <p>Remember that neither VLAB or VNC work without a stable internet connection - if your train route has poor
             reception,
             and you like to code on the train, the next section might be for you.
         </p>
-        <h2 id="wsl">Working remotely: Using WSL</h2>
+        <h2 id="wsl">Coding locally on your Windows computer with WSL</h2>
         <div class="alert alert-info">If you're not using Windows 10, or haven't updated Windows since 2018, this won't
             work.</div>
         <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily
             use a lot of the Linux commands and scripting
             which are taught in CSE degrees, and easily compile and run our code without connecting to CSE computers,
-            even if we have no internet connection.</p>
+            even if we have no internet connection. You don't need this if you only intend to connect to CSE computers.</p>
         <ol>
             <li><strong>Open PowerShell.</strong> Type in PowerShell into Windows Search, right click on the result and
                 click <strong>Run as administrator</strong>. Select Yes if a prompt shows up.</li>
@@ -256,9 +268,9 @@
         <p>Note: If you're ever using GitHub for coursework, make sure that you make your repo private to prevent
             plagiarism.</p>
         <h3>Installing Git</h3>
-        <p>If you're working on VLab, or with the CSE machines over SSH, Git is already installed on these machines!
+        <p>If you're working on VLAB, or with the CSE machines over SSH, Git is already installed on these machines!
             Otherwise, you'll need to install Git.</p>
-        <h5>For Linux and WSL:</h5>
+        <h5>For Ubuntu/Debian (including WSL):</h5>
         Run <code>sudo apt-get install git</code> from your terminal.
         <h5>For Windows and macOS:</h5>
         <p>Download Git from <a target="_blank" rel="noopener noreferrer"
@@ -298,7 +310,7 @@ int main(void) {
                 file to be
                 included in the next update. If you ever have multiple files that you want to update, use
                 <code>git add --all</code>.</li>
-            <li><strong>Run <code>git commit -m "Initialise repository"</code>.</strong> This keeps track of the update,
+            <li><strong>Run <code>git commit -m "Initialise repo"</code>.</strong> This keeps track of the update,
                 noting what changes you've made, and stores it on the <em>local copy of the repository</em>. Your commit
                 message should always describe the changes you've made (in present tense!).</li>
             <li><strong>Now, we want to sync our local repository with our remote repository on GitHub.</strong> The
@@ -329,13 +341,12 @@ int main(void) {
         <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a>
         </p> <img style="max-width:100%" src="img/git.jpg" alt="Git" />
         <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines with VSCode</h2>
-        <div class="alert alert-info">These instructions are written for Windows 10. I don't know how this works for
-            macOS, but if you do know how, contact me and I'll add your instructions, and give you an acknowledgement!
-        </div>
+        <div class="alert alert-info">These instructions are written for Windows 10, macOS and Linux.</div>
         <p>Following these instructions will mean you won't be asked for a password each time you open an SSH window,
             but will still keep your connection secure.
         </p>
         <h4>Part 1: Generate a keypair</h4>
+        <h5>Windows</h5>
         <ol>
             <li><strong>Open the Windows Command Prompt.</strong> You can do this by entering cmd in Search.</li>
             <li><strong>Generate a keypair.</strong> Use the command <code>ssh-keygen -t rsa -b 4096</code>.</li>
@@ -353,45 +364,82 @@ int main(void) {
                     mess of characters</abbr>. Use <kbd>Ctrl+A Ctrl+C</kbd> to copy the entire contents of this file.
             </li>
         </ol>
-        <p>Windows has now generated two files: id_rsa and id_rsa.pub. The id_rsa.pub file is what's called a public
+
+        <h5>Linux/macOS</h5>
+        <ol>
+            <li><strong>Open the Terminal.</strong></li>
+            <li><strong>Generate a keypair.</strong> Use the command <code>ssh-keygen -t rsa -b 4096</code>.</li>
+            <li><strong>You'll be asked where you want to save the key.</strong> Leave this blank, and press
+                <kbd>Enter</kbd>.</li>
+            <li><strong>You'll be asked to set a password.</strong> Setting a password would defeat the purpose of
+                generating
+                the keypair.
+                Leave this blank, and press <kbd>Enter</kbd> again. Do the same when you are asked to confirm it.</li>
+            <li><strong>In your Terminal</strong>, enter the command
+                <code>code ~/.ssh/id_rsa.pub</code>. This should open up a file in VSCode, starting with
+                ssh-rsa and followed
+                by a <abbr title="This actually represents extremely large number, which is used to form a mathematical lock. This is called RSA encryption,
+                and you can learn more about it in MATH3411.">long
+                    mess of characters</abbr>. Use <kbd>Ctrl+A Ctrl+C</kbd> to copy the entire contents of this file.
+            </li>
+        </ol>
+        <br><br>
+        <p>Your computer has now generated two files: id_rsa and id_rsa.pub. The id_rsa.pub file is what's called a
+            public
             key, while
-            id_rsa is a private key. <strong>Never share (or even open) the private key.</strong>
+            id_rsa is a private key. <strong>Never share (or even open) your private key.</strong> It's called a private
+            key for a reason :P
         </p>
-        <h4>Part 2: Using the keypair</h4>
+        <h4>Part 2: Using the keypair for CSE machines</h4>
+        Now, we need to tell the CSE computer that your computer is trustworthy, and you are who you claim to be. To do
+        this, we need to give the CSE computer the public key you just generated. If you're on Linux/macOS, this should
+        be pretty easy, but if you're on Windows, there's a few more steps.
+        <h5>Windows</h5>
         <ol>
             <li>
-                Using your existing SSH or VLab connection, open a terminal on the CSE computers. <abbr
-                    title="The purpose of these commands is to set the right file permissions.">Run the following
-                    commands in sequence.</abbr>
-                <pre>
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-touch ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
-code ~/.ssh/authorized_keys
-</pre>
+                Using your existing SSH or VLAB connection, open a terminal on the CSE computers. <abbr
+                    title="Technically multiple commands, which I've condensed for you. The purpose of these commands is to set the right file permissions.">Run
+                    the following
+                    command.</abbr>
+                <pre>mkdir ~/.ssh;chmod 700 ~/.ssh;touch ~/.ssh/authorized_keys;chmod 600 ~/.ssh/authorized_keys;code ~/.ssh/authorized_keys</pre>
             </li>
-            <li><strong>A window for a file called authorized_keys should open in VSCode.</strong>Paste your public key
+            <li><strong>A window for a file called authorized_keys should open in VSCode.</strong> Paste your public key
                 from earlier into this file, and save.</li>
+        </ol>
+        <h5>Linux/macOS</h5>
+        <ol>
+            <li><strong>Open the Terminal.</strong></li>
+            <li><strong>Run the following command:</strong> <code>ssh-copy-id z5555555@cse.unsw.edu.au</code>, replacing
+                with your own zID.</li>
+            <li><strong>Enter your password.</strong> You'll be asked for your CSE password one last time, for the key
+                to be copied over.</li>
+        </ol>
+        Voila! You had it a bit easier here.
+        <h4>Part 3: Telling VSCode on your computer to use your new keys</h4>
+        <ol>
+
             <li><strong>On your local machine, open the SSH menu in VSCode.</strong> Click <img src="img/ssh-icon.jpg"
                     alt="SSH icon" />, then <strong>Open Configuration File</strong>, and select the first option. You
                 should see something like this:<br>
                 <pre>
-Host cse.unsw.edu.au
-  HostName cse.unsw.edu.au
-  User z5555555
-  ForwardAgent yes
+    Host cse.unsw.edu.au
+    HostName cse.unsw.edu.au
+    User z5555555
+    ForwardAgent yes
 </pre>
             </li>
             <li><strong>We need to tell the SSH connection to use our private key.</strong> Add the following line to
-                your config file, using your own Windows username:</li>
-            <pre>
-Host cse.unsw.edu.au
-  HostName cse.unsw.edu.au
-  User z5555555
-  IdentityFile C:/Users/[YOURUSERNAME]/.ssh/id_rsa
-  ForwardAgent yes
-</pre>
+                your config file, after the line with 'User' on it. Make sure to indent it so that it's in line with the
+                others.</li>
+            <ul>
+                <li><strong>Windows:</strong> Make sure to enter your username. If you don't know it, it's the part
+                    after <code>C:/Users/</code> when you open cmd.
+                    <pre>IdentityFile C:/Users/[YOURUSERNAME]/.ssh/id_rsa</pre>
+                </li>
+                <li><strong>Linux/macOS</strong>
+                    <pre>IdentityFile ~/.ssh/id_rsa</pre>
+                </li>
+            </ul>
         </ol>
         <p>Once you've done this, you should be able to open Remote-SSH in VSCode without requiring a password.<br>If
             you need to add
@@ -441,17 +489,17 @@ Host cse.unsw.edu.au
             on GitHub.
         </p>
         <img style="max-width:100%" src="img/ssh-repo.jpg" alt="SSH key for a repo" />
-        <h2>Feedback, suggestions and improvements</h2>
+        <h2>Help! I'm stuck (or I have feedback for you)</h2>
         <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me
             on Facebook or
-            email me at<br><code>z5308310 [at] unsw.edu.au</code>
+            email me at<br><code>z5308310 [at] unsw.edu.au</code><br>
+            You can also contact me if you're stuck and need help.
         </p>
         <h2>Acknowledgements</h2>
         <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a
-                href="https://github.com/adaluong">adaluong</a> and <a href="https://github.com/ralismark">ralismark</a>
-            for looking over this and providing suggestions. Thanks to Tam Nguyen for suggesting I include dcc
-            instructions.</p>
-        <h6>Last updated: 11 April 2020</h6>
+                href="https://github.com/adaluong">adaluong</a>, <a href="https://github.com/ralismark">ralismark</a> and Tam Nguyen
+            for looking over this and/or providing suggestions.</p>
+        <h6>Created on 11 April 2020. Last updated on 24 May 2020.</h6>
         <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
             yet, so I threw a statically hosted page together with Bootstrap for now.</div>
     </div>
@@ -459,10 +507,10 @@ Host cse.unsw.edu.au
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
         $('.page-anchor').click(function (e) {
             e.preventDefault();
