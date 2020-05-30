@@ -60,7 +60,8 @@
         <h1>CSE home computing setup</h1>
         <p>I wrote this up back during 20T1, but uploaded it to my website to hopefully help students that are new to
             CSE courses :)
-            <br>Not all of this may be that helpful to you if the only CSE course you ever intend to take is COMP1511 - I
+            <br>Not all of this may be that helpful to you if the only CSE course you ever intend to take is COMP1511 -
+            I
             suspect that most people will only need to set up VSCode to use SSH.<br><br>
             However if you are planning to do more COMP courses in the future (especially if you're doing a CSE degree
             or DataSci), you're inevitably
@@ -96,8 +97,10 @@
                 editor</abbr>, uses SSH to let you edit files on other computers, such as the CSE computers.</p>
         <h4>Sounds epic, how do I set it up?</h4>
         <ol>
-            <li><strong>Install and open Visual Studio Code.</strong> You can find a download <a target="_blank"
-                    rel="noopener noreferrer" href="https://code.visualstudio.com/download">here.</a></li>
+            <li><strong>Download and install Visual Studio Code.</strong> You can find a download <a target="_blank"
+                    rel="noopener noreferrer" href="https://code.visualstudio.com/download">here.</a> When prompted to
+                do so during the install process, select to 'Add to PATH'. <strong>Restart your computer once you're
+                    done.</strong></li>
             <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
             <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also
                 install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to
@@ -110,7 +113,8 @@
             <li>
                 <strong>Click Connect to Host.</strong> In the field that shows up, type in
                 <code>z5555555@cse.unsw.edu.au</code>, using your zID instead. Hit <kbd>Enter</kbd>. A new window will
-                open. If asked for a platform, select Linux. Enter your password when prompted. If your password is
+                open. If asked to select a remote platform, select Linux. Enter your password when prompted. If your
+                password is
                 wrong, you will prompted to
                 retry. Once you've done that, you should be connected successfully!
                 <ul>
@@ -138,7 +142,8 @@
         <h3>Other cool VSCode things</h3>
         <img style="max-width:100%" src="img/vscode.jpg" alt="My VSCode over SSH" />
         <h4>Editor rulers</h4>
-        <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and it's good
+        <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and
+            it's good
             practice to do so!). You can make VSCode show you a handy
             little ruler to make sure your lines aren't too long.
         </p>
@@ -178,7 +183,8 @@
         <p>Windows 10 now supports running Linux distributions from within it. We can set this up so that we can easily
             use a lot of the Linux commands and scripting
             which are taught in CSE degrees, and easily compile and run our code without connecting to CSE computers,
-            even if we have no internet connection. You don't need this if you only intend to connect to CSE computers.</p>
+            even if we have no internet connection. You don't need this if you only intend to connect to CSE computers.
+        </p>
         <ol>
             <li><strong>Open PowerShell.</strong> Type in PowerShell into Windows Search, right click on the result and
                 click <strong>Run as administrator</strong>. Select Yes if a prompt shows up.</li>
@@ -380,7 +386,8 @@ int main(void) {
                 ssh-rsa and followed
                 by a <abbr title="This actually represents extremely large number, which is used to form a mathematical lock. This is called RSA encryption,
                 and you can learn more about it in MATH3411.">long
-                    mess of characters</abbr>. Use <kbd>Ctrl+A Ctrl+C</kbd> to copy the entire contents of this file.
+                    mess of characters</abbr>. Don't close this file. Use <kbd>Ctrl+A Ctrl+C</kbd> when you need to copy
+                the entire contents of this file in later steps.
             </li>
         </ol>
         <br><br>
@@ -497,7 +504,8 @@ int main(void) {
         </p>
         <h2>Acknowledgements</h2>
         <p>Thanks to <a href="https://github.com/lukefisklennon">lukefisklennon</a>, <a
-                href="https://github.com/adaluong">adaluong</a>, <a href="https://github.com/ralismark">ralismark</a> and Tam Nguyen
+                href="https://github.com/adaluong">adaluong</a>, <a href="https://github.com/ralismark">ralismark</a>
+            and Tam Nguyen
             for looking over this and/or providing suggestions.</p>
         <h6>Created on 11 April 2020. Last updated on 24 May 2020.</h6>
         <div class="alert alert-dark" role="alert">I haven't figured out how exactly I'm writing the backend for my blog
