@@ -1,8 +1,12 @@
-<div class="container">
-	<nav>
+<nav>
+	<div class="container">
 		<a href="/">
+			{% if include.page == "home >> abiram.me" %}
+			<img src="assets/images/ramen-splash.png" alt="logo" id="logo-text"/>
+			{% else %}
 			<img src="assets/images/ramen-logo.png" alt="logo" id="logo-text"/>
+			{% endif %}
 		</a>
 		<div id="nav-border"></div>
-	</nav>
-</div>
+	</div>
+</nav>
