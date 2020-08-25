@@ -1,0 +1,52 @@
+---
+---
+@import 'bootstrap/bootstrap';
+
+body {
+	background-color: #111111;
+	color: #e9e9e9;
+	overflow-x: hidden;
+}
+
+nav {
+	margin-top: 10px;
+}
+
+#nav-border {
+	display: block;
+	width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: #e9e9e9;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+#logo-text {
+	height: 50px;
+}
+
+#landing-splash {
+	background: rgb(211,255,255);
+	background: linear-gradient(135deg, rgb(209, 226, 245) 0%, rgb(206, 176, 205) 100%);
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+}
+
+#splash-text {
+	text-transform: uppercase;
+	font-family: 'Metropolis';
+	font-weight: 900;
+	letter-spacing: 10px;
+	line-height: 120px;
+	font-size: 5em;
+	color: #fff;
+	overflow-wrap: break-word;
+}
+
+#splash-name {
+	color: rgb(36, 52, 63);
+}
