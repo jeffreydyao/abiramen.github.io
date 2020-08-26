@@ -1,0 +1,17 @@
+<nav id = "navbar">
+	<div class="container">
+		<a href="/" id="navbar-logo">
+			{% if include.page == "home | abiram.me" %}
+			<img src="assets/images/ramen-splash.png" alt="logo" id="logo"/>
+			{% else %}
+			<img src="assets/images/ramen-logo.png" alt="logo" id="logo"/>
+			{% endif %}
+		</a>
+		<div id="nav-right">
+			<a href="/">home.</a>
+			<a href="/">writings.</a>
+			<a href="/">contact.</a>
+		</div>
+		<div id="nav-border"></div>
+	</div>
+</nav>
