@@ -10,7 +10,7 @@
   </head>
   <body>
 	
-		{% include navigation.html page=page.title %}
+		{% include navigation.html navtype=page.navtype %}
 		
 	
 	<section>
@@ -24,7 +24,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" 
 		crossorigin="anonymous"></script>
 
-	{% if page.title == "home | abiram.me" %}
+	{% if page.navtype == "splash" %}
 	<script src="assets/js/splash.js"></script>
 	{% endif %}
 	

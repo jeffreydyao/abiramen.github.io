@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	$("#nav-border").css("background", "rgb(57, 78, 92)");
 	$("nav #nav-right a").css("color", "rgb(57, 78, 92)");
+	$("nav").css("background", "transparent");
+	console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
 });
 
 
@@ -23,7 +25,7 @@ $(window).scroll(function() {
 		nav_hidden = true;
 	}
 
-	let splash_bottom = $("#landing-splash").offset().top + $("#landing-splash").outerHeight(true) - 50;
+	let splash_bottom = $("#landing-splash").offset().top + $("#landing-splash").outerHeight(true) - 10;
 
 	if (grayscale && scroll > splash_bottom) {
 		toggleGrayscaleOff();
@@ -35,15 +37,15 @@ $(window).scroll(function() {
 function toggleGrayscaleOn() {
 	$("#nav-border").css("background", "rgb(57, 78, 92)");
 	$("nav #nav-right a").css("color", "rgb(57, 78, 92)");
+	$("nav").css("background", "transparent");
 	$("#logo").attr("src", "assets/images/ramen-splash.png");
 	grayscale = true;
-	console.log("nice");
 }
 
 function toggleGrayscaleOff() {
 	$("#nav-border").css("background", "#e9e9e9");
 	$("nav #nav-right a").css("color", "#e9e9e9");
 	$("#logo").attr("src", "assets/images/ramen-logo.png");
+	$("nav").css("background", "#111");
 	grayscale = false;
-	console.log("nicer");
 }

@@ -2,20 +2,24 @@
 ---
 @import 'bootstrap/bootstrap';
 
+$bg: #111111;
+
 body {
-	background-color: #111111;
+	background-color: $bg;
 	color: #e9e9e9;
 	overflow-x: hidden;
+	font-family: 'Metropolis';
 }
 
 nav {
-	margin-top: 10px;
+	padding-top: 10px;
 	width: 100%;
 	position: fixed;
+	background-color: $bg;
 }
 
 #nav-right {
-	line-height: 55px;
+	line-height: 60px;
 }
 
 nav #nav-right a {
@@ -84,6 +88,23 @@ nav #nav-right a {
 	overflow-wrap: break-word;
 }
 
+@media only screen and (max-width: 600px) {
+	#splash-text {
+		letter-spacing: 7px;
+		line-height: 80px;
+		font-size: 3.5em;
+	}
+}
+
 #splash-name {
 	color: rgb(57, 78, 92);
+}
+
+h1, h2, h3 {
+	font-family: 'Metropolis Extra';
+	font-weight: 800;
+}
+
+.centre {
+	text-align: center;
 }
