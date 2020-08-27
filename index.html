@@ -9,8 +9,32 @@ layout: default
 		<div id="splash-text">Hi!<br>I'm <span id = "splash-name">Abiram</span>,<br> a coder who<br> loves ramen.</div>
 	</div>
 </div>
+
 <div class="container" style="margin-top: 100px;">
-	<h3 class = "centre">I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
+	<h3>I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
+	<p>I created this site to serve as a portfolio of some of the cool stuff I've done, and also so that I can publish some of the
+		random thoughts and ramblings I want to share with the world.<br>
+		If you're here now for some reason, this is all a work in progress.
+	</p>
+	<h2>Projects</h2>
+	{% include showcase.html type="Project" title="CSESoc Website"
+	   duration = "April 2020 -" 
+	   color-start="#ff9190" color-end="#5e72eb" id = "sc-csesoc" 
+	   desc="In my first major team project, I had the opportunity to improve
+	   my front and backend web development skills while fostering a DevOps culture."%}
+
+    {% include showcase.html type="Project" title="UNSW SecSoc"
+	    duration = "April 2020 -" 
+	    color-start="#7cd4e6" color-end="#9933CC" id = "sc-secsoc" 
+	    desc="I explored my interests in security while on SecSoc's committee,
+		writing Capture the Flag (CTF) challenges." %}
+	
+	{% include showcase.html type="Project" title="cr4sh-0verr1ders"
+	    duration = "June 2020 - August 2020" 
+	    color-start="#7cd4e6" color-end="#9933CC" id = "sc-hackathon" 
+		desc="I participated in a team of five in hackathons ran by CSESoc to rapidly develop applications 
+		in a 24 hour period." %}
 </div>
-<div style="padding-bottom:1500px">.</div>
+
+<div style="padding-bottom:1500px"></div>
 

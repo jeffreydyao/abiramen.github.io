@@ -2056,9 +2056,9 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media print { *, *::before, *::after { text-shadow: none !important; box-shadow: none !important; } a:not(.btn) { text-decoration: underline; } abbr[title]::after { content: " (" attr(title) ")"; } pre { white-space: pre-wrap !important; } pre, blockquote { border: 1px solid #999; page-break-inside: avoid; } thead { display: table-header-group; } tr, img { page-break-inside: avoid; } p, h2, h3 { orphans: 3; widows: 3; } h2, h3 { page-break-after: avoid; } @page { size: a3; } body { min-width: 992px !important; } .container { min-width: 992px !important; } .navbar { display: none; } .badge { border: 1px solid #000; } .table { border-collapse: collapse !important; } .table td, .table th { background-color: #fff !important; } .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
 
-body { background-color: #111111; color: #e9e9e9; overflow-x: hidden; font-family: 'Metropolis'; }
+body { background-color: #111111; color: #e9e9e9; overflow-x: hidden; font-family: 'Metropolis'; font-weight: 500; }
 
-nav { padding-top: 10px; width: 100%; position: fixed; background-color: #111111; }
+nav { padding-top: 10px; width: 100%; position: fixed; background-color: #111111; z-index: 999; }
 
 #nav-right { line-height: 60px; }
 
@@ -2087,5 +2087,17 @@ nav #nav-right a { color: white; font-size: 23px; font-family: 'Metropolis'; fon
 h1, h2, h3 { font-family: 'Metropolis Extra'; font-weight: 800; }
 
 .centre { text-align: center; }
+
+.showcase-item { border-radius: 30px !important; width: 80%; min-width: 300px; max-width: 750px; margin: 0 auto; padding: 30px; margin-top: 20px; margin-bottom: 20px; z-index: 1; transform: scale(1); transition: transform 0.2s; }
+
+.showcase-item:hover { transform: scale(1.02); cursor: pointer; }
+
+.showcase-title { font-family: 'Metropolis'; font-weight: 800; font-size: 2em; }
+
+.showcase-type { text-transform: uppercase; font-family: 'Metropolis'; font-weight: 500; font-size: 14px; letter-spacing: 2px; }
+
+.showcase-duration { text-transform: uppercase; font-family: 'Metropolis'; margin-top: -10px; font-size: 16px; }
+
+.showcase-desc { margin-top: 5px; line-height: 24px; font-size: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
