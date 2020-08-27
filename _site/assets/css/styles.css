@@ -2088,7 +2088,7 @@ h1, h2, h3 { font-family: 'Metropolis Extra'; font-weight: 800; }
 
 .centre { text-align: center; }
 
-.showcase-item { border-radius: 30px !important; width: 80%; min-width: 300px; max-width: 750px; margin: 0 auto; padding: 30px; margin-top: 20px; margin-bottom: 20px; z-index: 1; transform: scale(1); transition: transform 0.2s; }
+.showcase-item { border-radius: 30px !important; width: 100%; max-width: 1200px; margin: 0 auto; padding: 30px; margin-top: 20px; margin-bottom: 20px; z-index: 1; transform: scale(1); transition: transform 0.2s; }
 
 .showcase-item:hover { transform: scale(1.02); cursor: pointer; }
 
