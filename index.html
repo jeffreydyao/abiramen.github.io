@@ -14,26 +14,41 @@ layout: default
 	<h3>I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
 	<p>I created this site to serve as a portfolio of some of the cool stuff I've done, and also so that I can publish some of the
 		random thoughts and ramblings I want to share with the world.<br>
-		If you're here now for some reason, this is all a work in progress.
+		Here's some stuff I've done recently.
 	</p>
-	<h2>Projects</h2>
-	{% include showcase.html type="Project" title="CSESoc Website"
+	<h2>projects.</h2>
+	{% for project in site.data.projects %}
+		{% include "showcase.html"
+			type="Project" title={{ project.title }}
+			duration = {{ project.duration }} 
+			color-start={{ project.color-start }} color-end={{ project.color-end }} id = {{project.id}} 
+			desc={{ project.desc }}
+			link={{ project.link }}
+		%}
+	{% endfor %}
+
+	<!-- {% include showcase.html type="Project" title="CSESoc Website"
 	   duration = "April 2020 -" 
 	   color-start="#3499ff" color-end="#3a3985" id = "sc-csesoc" 
 	   desc="In my first major team project, I had the opportunity to improve
-	   my front and backend web development skills while fostering a DevOps culture."%}
+	   my front and backend web development skills while fostering a DevOps culture."
+	   link="https://github.com/csesoc/csesoc.unsw.edu.au/tree/dev/" %}
 
     {% include showcase.html type="Project" title="UNSW SecSoc"
 	    duration = "April 2020 -" 
 	    color-start="#79edb8" color-end="#002661" id = "sc-secsoc" 
 	    desc="I explored my interests in security while on SecSoc's committee,
-		writing Capture the Flag (CTF) challenges." %}
+		writing Capture the Flag (CTF) challenges."
+		link="https://unswsecurity.com/" %}
 	
-	{% include showcase.html type="Project" title="cr4sh-0verr1ders"
-	    duration = "June 2020 - August 2020" 
-	    color-start="#ff9482" color-end="#7d77ff" id = "sc-hackathon" 
+	{% include showcase.html type="Project" title="cr4sh-0verr1de"
+		duration = "June 2020 - August 2020" 
+	    color-start="#e67765" color-end="#5c57cf" 	id = "sc-hackathon" 
 		desc="I participated in a team of five in hackathons ran by CSESoc to rapidly develop applications 
-		in a 24 hour period." %}
+		in a 24 hour period."
+		link="https://github.com/cr4sh-0verr1ders"%} -->
+	
+	<h2>foreseeably asked questions (faq).</h2>
 </div>
 
 <div style="padding-bottom:1500px"></div>

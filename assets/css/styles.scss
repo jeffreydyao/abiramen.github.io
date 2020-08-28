@@ -1,6 +1,7 @@
 ---
 ---
-@import 'bootstrap/bootstrap';
+
+@import "bootstrap/bootstrap";
 
 $bg: #111111;
 
@@ -10,6 +11,7 @@ body {
 	overflow-x: hidden;
 	font-family: 'Metropolis';
 	font-weight: 500;
+	font-size: 16px;
 }
 
 nav {
@@ -107,6 +109,10 @@ h1, h2, h3 {
 	font-weight: 800;
 }
 
+h3 {
+	font-size: 23px;
+}
+
 .centre {
 	text-align: center;
 }
@@ -153,4 +159,15 @@ h1, h2, h3 {
 	margin-top: 5px;
 	line-height: 24px;
 	font-size: 20px;
+}
+
+.showcase-anchor {
+	color: white;
+	text-decoration: none !important;
+	
+}
+
+a .showcase-item:hover {
+	color: white;
+	text-decoration: none !important;
 }
