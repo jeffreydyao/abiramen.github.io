@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 var nav_hidden = false;
 var monochrome = true;
+var transparency = true;
 
 $(window).scroll(function() {
 	let scroll = $(this).scrollTop();
@@ -25,19 +26,24 @@ $(window).scroll(function() {
 		nav_hidden = true;
 	}
 
-	let splash_bottom = $("#landing-splash").offset().top + $("#landing-splash").outerHeight(true) - 10;
+	let splash_bottom = $("#landing-splash").offset().top + $("#landing-splash").outerHeight(true);
 
-	if (monochrome && scroll > splash_bottom) {
+	if (monochrome && scroll > splash_bottom - 50) {
 		toggleMonochromeOff();
-	} else if (!monochrome && scroll < splash_bottom) {
+	} else if (!monochrome && scroll < splash_bottom - 50) {
 		toggleMonochromeOn();
+	}
+
+	if (transparency && scroll > splash_bottom) {
+		toggleTransparencyOff();
+	} else if (!transparency && scroll < splash_bottom) {
+		toggleTransparencyOn();
 	}
 });
 
 function toggleMonochromeOn() {
 	$("#nav-border").css("background", "rgb(57, 78, 92)");
 	$("nav #nav-right a").css("color", "rgb(57, 78, 92)");
-	$("nav").css("background", "transparent");
 	$("#logo").attr("src", "assets/images/ramen-splash.png");
 	monochrome = true;
 }
@@ -46,6 +52,15 @@ function toggleMonochromeOff() {
 	$("#nav-border").css("background", "#e9e9e9");
 	$("nav #nav-right a").css("color", "#e9e9e9");
 	$("#logo").attr("src", "assets/images/ramen-logo.png");
-	$("nav").css("background", "#111");
 	monochrome = false;
+}
+
+function toggleTransparencyOff() {
+	$("nav").css("background", "#111");
+	transparency = false;
+}
+
+function toggleTransparencyOn() {
+	$("nav").css("background", "transparent");
+	transparency = true;
 }

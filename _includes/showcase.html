@@ -1,17 +1,17 @@
-<a href = "{{ include.link }}" class = "showcase-anchor" target="_blank" rel="noopener noreferrer">
-	<div class = "showcase-item" id = "{{ include.id }}">
-		<div class="showcase-text">
-			<div class="showcase-type">{{ include.type }}</div>
-			<div class="showcase-title">{{ include.title }}</div>
-			<div class="showcase-duration">{{ include.duration }}</div>
-			<div class="showcase-desc">{{ include.desc }}</div>
-		</div>
-		
-		<style scoped>
-			#{{ include.id }} {
-				background: linear-gradient(350deg, {{include.color-start}}, {{include.color-end}});
-			}
-		</style>
-	</div>
+<a href = "{{ include.data.link }}" class = "showcase-anchor" target="_blank" rel="noopener noreferrer">
+    <div class = "showcase-item" id = "sc-{{ include.data.id }}">
+        <div class="showcase-text">
+            <div class="showcase-type">{{ include.data.type }}</div>
+            <div class="showcase-title">{{ include.data.title }}</div>
+            <div class="showcase-duration">{{ include.data.duration }}</div>
+            <div class="showcase-desc">{{ include.data.desc }}</div>
+        </div>
+        
+        <style scoped>
+            #sc-{{ include.data.id }} {
+                background: linear-gradient(350deg, #{{include.data.color-start}}, #{{include.data.color-end}});
+            }
+        </style>
+    </div>
 </a>
-	
+    

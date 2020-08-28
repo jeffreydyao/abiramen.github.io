@@ -1,8 +1,23 @@
-- title: 'CSESoc Website'
+- title: CSESoc Website
   duration: April 2020 -
-  color-start: "#3499ff"
-  color-end: "#3a3985"
-  id: sc-csesoc
+  color-start: 3499ff
+  color-end: 3a3985
+  id: csesoc
   desc: In my first major team project, I had the opportunity to improve my front and backend web development skills while fostering a DevOps culture.
   link: https://github.com/csesoc/csesoc.unsw.edu.au/tree/dev/
 
+- title: UNSW SecSoc
+  duration: April 2020 - 
+  color-start: 79edb8
+  color-end: 002661 
+  id: secsoc 
+  desc: I explored my interests in security while on SecSoc's committee, writing Capture the Flag (CTF) challenges.
+  link: https://unswsecurity.com/
+
+- title: cr4sh-0verr1de
+  duration: June 2020 - August 2020 
+  color-start: e67765 
+  color-end: 5c57cf
+  id: hackathon
+  desc: I participated in a team of five in hackathons ran by CSESoc to rapidly develop applications in a 24 hour period.
+  link: "https://github.com/cr4sh-0verr1ders" 
