@@ -1,0 +1,20 @@
+---
+layout: default
+title: projects
+navtype: standard
+---
+<section id="projects-section">
+    <div class="container">
+        <h2>projects.</h2> 
+        <ul id = "project-list">
+        {% for project in site.data.projects %} 
+                <li class = "project-item">
+                    <a href = "{{ project.link }}"><span class="project-title">{{ project.title }} 🡒</span></a><br>
+                    <div class = "project-desc">{{ project.desc }}</div>
+                    <span class="project-time">( {{ project.time }} )</span>
+                </li>
+                {% endfor %}
+        </ul>
+        <h3 class="ralign"><a href="https://github.com/abiramen" target="_blank">Visit my GitHub 🡒</a></h3>
+    </div>
+</section>

@@ -1,2 +1,7 @@
 sass:
   sass_dir: assets/css
+plugins:
+  - jekyll-seo-tag
+title: abiramen's site
+description: The personal site of @abiramen on GitHub.
+logo: /assets/images/ramen-logo.png

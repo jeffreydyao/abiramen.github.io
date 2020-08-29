@@ -1,6 +1,6 @@
 ---
 navtype: splash
-title: home | abiram.me
+title: home
 layout: default
 ---
 
@@ -10,25 +10,49 @@ layout: default
     </div>
 </div>
 
-<div class="container" style="margin-top: 100px;">
-    <h3>I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
-    <p>I created this site to serve as a portfolio of some of the cool stuff I've done, and also so that I can publish some of the
-        random thoughts I want to share with the world.<br>
-    </p>
-    <h2>recent projects.</h2>
 
-    {% for project in site.data.projects %}
-        {% include showcase.html type="Project" data=project %}
-    {% endfor %}
+<section id="intro">
+    <div class="container">
+        <h3>I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
+        <p>I created this site to serve as a portfolio of some of the cool stuff I've done, and also so that I can publish some of the
+            random thoughts I want to share with the world.<br>
+        </p>
+    </div>
+</section>
 
-    <h3>You can see more of what I'm working on <a href = "https://github.com/abiramen">here</a>.</h3>
+<section id="showcase-section">
     
-    <h2>foreseeably asked questions.</h2>
+    <div class="container">
+        <h2>recent posts.</h2>
+        
+        {% assign project = site.posts[0] %}
+        {% include showcase.html type="Post" data=project color="#d6a2c5"%}
+        
+        
+        <h3 class="ralign"><a href="/posts/">Read more here 🡒</a></h3>
+    </div>
 
-    {% for question in site.data.faq %}
-    <p>
-        <strong>Q: {{ question.q }}</strong><br>
-        {{ question.a }}
-    </p>
-    {% endfor %}
-</div>
+    <div class="container">
+        <h2>recent projects.</h2>
+        
+        {% assign project = site.data.projects[0] %}
+        {% include showcase.html type="Project" data=project color="#98cade"%}
+        
+        
+        <h3 class="ralign"><a href="/projects/">See more here 🡒</a></h3>
+    </div>
+</section>
+
+<section id = "faq-section">
+    <div class="container">
+        <h2>foreseeably asked questions.</h2>
+        
+        {% for question in site.data.faq %}
+        <p>
+            <strong>Q: {{ question.q }}</strong><br>
+            {{ question.a }}
+        </p>
+        {% endfor %}
+    </div>
+</section>
+    

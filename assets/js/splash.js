@@ -41,6 +41,13 @@ $(window).scroll(function() {
 	}
 });
 
+function toggleMonochromeOff() {
+	$("#nav-border").css("background", "#e9e9e9");
+	$("nav #nav-right a").css("color", "#e9e9e9");
+	$("#logo").attr("src", "assets/images/ramen-logo.png");
+	monochrome = false;
+}
+
 function toggleMonochromeOn() {
 	$("#nav-border").css("background", "rgb(57, 78, 92)");
 	$("nav #nav-right a").css("color", "rgb(57, 78, 92)");
@@ -48,12 +55,6 @@ function toggleMonochromeOn() {
 	monochrome = true;
 }
 
-function toggleMonochromeOff() {
-	$("#nav-border").css("background", "#e9e9e9");
-	$("nav #nav-right a").css("color", "#e9e9e9");
-	$("#logo").attr("src", "assets/images/ramen-logo.png");
-	monochrome = false;
-}
 
 function toggleTransparencyOff() {
 	$("nav").css("background", "#111");

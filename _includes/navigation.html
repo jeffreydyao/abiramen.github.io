@@ -2,16 +2,20 @@
 	<div class="container">
 		<a href="/" id="navbar-logo">
 			{% if include.navtype == "splash" %}
-			<img src="assets/images/ramen-splash.png" alt="logo" id="logo"/>
+			<img src="/assets/images/ramen-splash.png" alt="logo" id="logo"/>
 			{% else %}
-			<img src="assets/images/ramen-logo.png" alt="logo" id="logo"/>
+			<img src="/assets/images/ramen-logo.png" alt="neon-logo" id="logo"/>
 			{% endif %}
 		</a>
 		<div id="nav-right">
 			<a href="/">home.</a>
-			<a href="/">writings.</a>
-			<a href="/">contact.</a>
+			<a href="/projects">projects.</a>
+			<a href="/writings">writings.</a>
 		</div>
 		<div id="nav-border"></div>
 	</div>
 </nav>
+
+{% if include.navtype == "standard" %}
+	<div style = "height: 73px"></div>
+{% endif %}

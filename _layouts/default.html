@@ -2,27 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | abiram.me</title>
 	<link rel="stylesheet" href="/assets/css/styles.css">
-	<link rel="stylesheet" href="/assets/fonts/metropolis.css">
+	<link rel="stylesheet" href="/assets/fonts/fonts.css">
 	<link rel="shortcut icon" href="/assets/images/ramen-logo.png" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{% seo %}
   </head>
   <body>
 	
-		{% include navigation.html navtype=page.navtype %}
-		
-	<section>
-		{{ content }}
-	</section>
-
-	<footer>
-		<div id = "footer-content">
-			<div class="centre" id="love-and-ramen">Made with ❤ and ramen by Abiram</div>
-			<img src="/assets/images/ramen-logo.png" id = "ramen-footer" width = "100px" alt="logo">
-			<div id="footer-flavour">You're at the bottom of this page. Or are you?</div>
-		</div>
-	</footer>
+	{% include navigation.html navtype=page.navtype %}
+	
+	{{ content }}
+	
+	{% include footer.html %}
+	
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
