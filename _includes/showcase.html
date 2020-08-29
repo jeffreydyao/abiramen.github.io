@@ -1,4 +1,4 @@
-<a href = "{{ include.data.permalink }}" class = "showcase-anchor" target="_blank" rel="noopener noreferrer">
+<a href = "{{ include.data.permalink }}" class = "showcase-anchor" {% if include.type == "Project" %} target="_blank" rel="noopener noreferrer" {% endif %}>
     <div class = "showcase-item" id = "sc-{{ include.data.short }}">
         <div class="showcase-text">
             <div class="showcase-type">{{ include.type }}</div>
