@@ -1,16 +1,15 @@
+var nav_hidden = false;
+var monochrome = false;
+var transparency = false;
+
 $(document).ready(function() {
-	$("#nav-border").css("background", "rgb(57, 78, 92)");
-	$("nav #nav-right a").css("color", "rgb(57, 78, 92)");
-	$("nav").css("background", "transparent");
+	scrollHandler();
 	console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
 });
 
+$(window).scroll(scrollHandler);
 
-var nav_hidden = false;
-var monochrome = true;
-var transparency = true;
-
-$(window).scroll(function() {
+function scrollHandler() {
 	let scroll = $(this).scrollTop();
 	let text_top = $("#splash-text").offset().top;
 	var text_bottom = text_top + $("#splash-text").outerHeight(true);
@@ -39,7 +38,7 @@ $(window).scroll(function() {
 	} else if (!transparency && scroll < splash_bottom) {
 		toggleTransparencyOn();
 	}
-});
+}
 
 function toggleMonochromeOff() {
 	$("#nav-border").css("background", "#e9e9e9");

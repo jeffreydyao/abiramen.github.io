@@ -6,19 +6,14 @@ layout: default
 
 <div id="landing-splash">
     <div class="container">
-        <div id="splash-text">Hi!<br>I'm <span id = "splash-name">Abiram</span>,<br> a coder who<br> loves ramen.</div>
+        <div id="splash-text">
+            <div id="splash-title">
+                Hi! I'm <span id = "splash-name">Abiram</span>.
+            </div>
+            I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.
+        </div>
     </div>
 </div>
-
-
-<section id="intro">
-    <div class="container">
-        <h3>I'm a first year student at UNSW Sydney, studying computer science and electrical engineering.</h3>
-        <p>I created this site to serve as a portfolio of some of the cool stuff I've done, and also so that I can publish some of the
-            random thoughts I want to share with the world.<br>
-        </p>
-    </div>
-</section>
 
 <section id="showcase-section">
     
@@ -29,7 +24,7 @@ layout: default
         {% include showcase.html type="Post" data=project color="#d6a2c5"%}
         
         
-        <h3 class="ralign"><a href="/writings/">Read more here 🡒</a></h3>
+        <h3 class="ralign"><a href="/writings/">Read more here <span class="icon">arrow_right_alt</span></a></h3>
     </div>
 
     <div class="container">
@@ -39,7 +34,7 @@ layout: default
         {% include showcase.html type="Project" data=project color="#98cade"%}
         
         
-        <h3 class="ralign"><a href="/projects/">See more here 🡒</a></h3>
+        <h3 class="ralign"><a href="/projects/">See more here <span class="icon">arrow_right_alt</span></a></h3>
     </div>
 </section>
 

@@ -12,6 +12,7 @@ body {
     font-family: 'Metropolis';
     font-weight: 500;
     font-size: 16px;
+    z-index: 1;
 }
 
 nav {
@@ -19,7 +20,13 @@ nav {
     width: 100%;
     position: fixed;
     background-color: $bg;
-    z-index: 999;
+    z-index: 9999;
+}
+
+@media only screen and (min-width: 800px) {
+    nav #nav-right a {
+        font-size: 20px;
+    }
 }
 
 #nav-right {
@@ -38,9 +45,9 @@ nav #nav-right a {
     vertical-align: middle;
 }
 
-@media only screen and (max-width: 600px) {
-    nav #nav-right a {
-        font-size: 20px;
+@media only screen and (max-width: 800px) {
+    nav .container {
+        max-width: 1200px;
     }
 }
 
@@ -77,37 +84,34 @@ nav #nav-right a {
     min-height: 100vh;
     width: 100vw;
     display: flex;
-      flex-direction: column;
-      justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 @keyframes AnimateSplash {
-    0%{background-position:0% 10%}
-    50%{background-position:70% 71%}
-    100%{background-position:0% 10%}
+    0% {background-position:0% 10%}
+    50% {background-position:70% 71%}
+    100% {background-position:0% 10%}
 }
 
+
 #splash-text {
-    text-transform: uppercase;
+    color: #263540;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#splash-title {
     font-family: 'Metropolis';
-    font-weight: 900;
-    letter-spacing: 10px;
+    font-weight: 700;
     line-height: 120px;
-    font-size: 5em;
-    color: #fff;
+    font-size: 3em;
     overflow-wrap: break-word;
 }
 
-@media only screen and (max-width: 600px) {
-    #splash-text {
-        letter-spacing: 7px;
-        line-height: 80px;
-        font-size: 3.5em;
-    }
-}
-
 #splash-name {
-    color: rgb(57, 78, 92);
+    font-weight: 800;
 }
 
 h1, h2, h3 {
@@ -127,12 +131,8 @@ h3 {
     text-align: right;
 }
 
-.ralign a, li a {
+.ralign a, li a, .project-item a {
     color: white;
-}
-
-#intro {
-    margin: 120px;
 }
 
 .showcase-item {
@@ -192,8 +192,8 @@ a .showcase-item:hover {
 
 #showcase-section {
     background: url("/assets/images/brickwall.png");
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #faq-section {
@@ -226,6 +226,13 @@ a .showcase-item:hover {
 
 .project-desc {
     font-size: 20px;
+}
+
+.icon {
+    font-family: 'Material Icons Round';
+    display: inline-flex;
+    vertical-align: top;
+
 }
 
 footer {
