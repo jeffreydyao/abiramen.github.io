@@ -1,0 +1,66 @@
+nav {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    position: fixed;
+    background-color: $bg;
+    z-index: 9999;
+}
+
+@media only screen and (min-width: 800px) {
+    nav #nav-right a {
+        font-size: 20px;
+    }
+}
+
+#nav-contain {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#nav-right {
+    line-height: 60px;
+}
+
+nav #nav-right a {
+    color: white;
+    font-size: 21px;
+    font-family: 'Metropolis';
+    font-weight: bold;
+    padding-right: 15px;
+    padding-left: 6px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 800px) {
+    nav .container {
+        max-width: 1200px;
+    }
+}
+
+#nav-border {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #e9e9e9;
+    margin: 0 auto;
+    margin-top: 3px;
+    clear: both;
+}
+
+#navbar-logo {
+    float: left;
+}
+
+#nav-right {
+    float: right;
+}
+
+#logo {
+    margin-left: 3px;
+    height: 59px;
+}

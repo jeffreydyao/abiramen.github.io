@@ -1,0 +1,25 @@
+---
+layout: default
+title: blog
+navtype: standard
+---
+<section id="projects-section">
+    <div class="container">
+        <h2>posts.</h2> 
+        <ul id = "project-list">
+        {% for post in site.posts %} 
+            <li class = "project-item">
+                <a href = "{{ post.permalink }}"><span class="project-title">{{ post.title }}. <span class="icon">keyboard_arrow_right</span></span></a><br>
+                <div class = "project-desc">{{ post.desc }}</div>
+                <span class="project-time">
+                    {% if post.last-update != ""%}
+                    Updated {{ post.last-update }}. First posted {{ post.time }}. 
+                    {% else %}
+                    Posted {{ post.time }}.
+                    {% endif %}
+                </span>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>

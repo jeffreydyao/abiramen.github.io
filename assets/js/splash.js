@@ -9,16 +9,32 @@ $(document).ready(function() {
 
 $(window).scroll(scrollHandler);
 
+$('.page-anchor-offset').click(function (e) {
+    e.preventDefault();
+    var aid = $(this).attr("href");
+    $('html,body').animate({
+        scrollTop: $(aid).offset().top - 90
+    }, 'fast');
+});
+
+$('.page-anchor').click(function (e) {
+	e.preventDefault();
+    var aid = $(this).attr("href");
+    $('html,body').animate({
+		scrollTop: $(aid).offset().top
+    }, 'fast');
+});
+
 function scrollHandler() {
 	let scroll = $(this).scrollTop();
 	let text_top = $("#splash-text").offset().top;
 	var text_bottom = text_top + $("#splash-text").outerHeight(true);
-	if (nav_hidden && (scroll > text_bottom + 30 || scroll < text_top - 130)) {
+	if (nav_hidden && (scroll > text_bottom + 100 || scroll < text_top - 130)) {
 		$("#navbar").animate({
 			opacity: 1
 		}, 150);
 		nav_hidden = false;
-	} else if (!nav_hidden && scroll > text_top - 130 && scroll < text_bottom + 30) {
+	} else if (!nav_hidden && scroll > text_top - 130 && scroll < text_bottom + 100) {
 		$("#navbar").animate({
 			opacity: 0
 		}, 150);

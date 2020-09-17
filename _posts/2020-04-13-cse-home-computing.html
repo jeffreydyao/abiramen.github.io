@@ -1,11 +1,11 @@
 ---
 permalink: /cse-setup/
 short: cse-setup
-title: Home Computing setup
+title: home computing setup
 time: 13 April 2020
 last-update: 30 August 2020
 layout: post
-desc: A guide for COMP1511 students to set up their own devices to get them on track to becoming r3al h4ck3rs. 
+desc: I wrote this guide for UNSW CSE students to set up their own computers for an optimal coding experience.
 ---
 <style>
     .card {
@@ -37,17 +37,6 @@ desc: A guide for COMP1511 students to set up their own devices to get them on t
         background-color: #0c5460;
         color: #d1ecf1;
     }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin-top: 10px;
-    }
-
-    h1 {
-        margin-bottom: 10px;
-    }
 </style>
 
 <p>I wrote this up back during 20T1, but uploaded it to my website to hopefully help students that are new to
@@ -63,14 +52,14 @@ desc: A guide for COMP1511 students to set up their own devices to get them on t
     <div class="card-body">
         <h5 class="card-title">Summary (clicking links will take you to the relevant section)</h5>
         I work across two of my own computers as well as the physical CSE computers. I use <a href="#vsc"
-            class="page-anchor">SSH via VSCode</a> if I want
+            class="page-anchor-offset">SSH via VSCode</a> if I want
         to work on the CSE machines, or I use the
-        <a href="#wsl" class="page-anchor">Windows Subsystem for Linux (WSL)</a> if I want to work on my local
+        <a href="#wsl" class="page-anchor-offset">Windows Subsystem for Linux (WSL)</a> if I want to work on my local
         machine, especially if I'm on a bus or a
-        train. I use a <a href="#git-github" class="page-anchor">GitHub repository</a> to sync code between my
+        train. I use a <a href="#git-github" class="page-anchor-offset">GitHub repository</a> to sync code between my
         two devices and the CSE machine. I never need
         to
-        enter passwords because I use <a href="#ssh-vsc" class="page-anchor">SSH-RSA</a> keys.
+        enter passwords because I use <a href="#ssh-vsc" class="page-anchor-offset">SSH-RSA</a> keys.
     </div>
 </div>
 <h2 id="vsc">Working on CSE machines over SSH with VSCode</h2>
@@ -100,7 +89,7 @@ desc: A guide for COMP1511 students to set up their own devices to get them on t
     <li>
         <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img
             src="/assets/images/blog/cse-setup/ssh-icon.jpg" alt="SSH icon" /> in the bottom left. The menu should look like this:<br>
-        <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-menu.jpg" alt="SSH menu" />
+        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu.jpg" alt="SSH menu" />
     </li>
     <li>
         <strong>Click Connect to Host.</strong> In the field that shows up, type in
@@ -124,15 +113,15 @@ desc: A guide for COMP1511 students to set up their own devices to get them on t
     <li>
         <strong>You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.</strong> Now you don't have to
         type it in each time.
-        <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-menu-2.jpg" alt="SSH menu" />
+        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu-2.jpg" alt="SSH menu" />
     </li>
     <li>If you want to avoid having to enter your password each time, scroll down to <a href="#ssh-vsc"
-            class="page-anchor">Using
+            class="page-anchor-offset">Using
             SSH
             keypairs</a>.</li>
 </ol>
 <h3>Other cool VSCode things</h3>
-<img style="max-width:100%" src="/assets/images/blog/cse-setup/vscode.jpg" alt="My VSCode over SSH" />
+<img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/vscode.jpg" alt="My VSCode over SSH" />
 <h4>Editor rulers</h4>
 <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and
     it's good
@@ -227,7 +216,7 @@ desc: A guide for COMP1511 students to set up their own devices to get them on t
 <p>This part is very very optional, but installs <a target="_blank" rel="noopener noreferrer"
         href="https://www.youtube.com/watch?v=8gw0rXPMMPE">Windows Terminal</a>, which allows you to access cmd,
     powershell and bash in one place, open multiple terminals, and most importantly, use themes!</p>
-<img style="max-width:100%" src="/assets/images/blog/cse-setup/wt.jpg" alt="Windows Terminal" />
+<img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/wt.jpg" alt="Windows Terminal" />
 <div class="alert alert-info">You need to be on at least Windows 10 version 1909 for this to work. You can check
     your Windows version by opening Search and entering <code>winver</code>.
     If you're really really bothered and want to update Windows, go <a target="_blank" rel="noopener noreferrer"
@@ -322,7 +311,7 @@ int main(void) {
     made a notable change, so that you can revert your code if you ever have problems later on. Note that
     git will
     ask for your GitHub password each time you push. We can avoid this by <a href="#ssh-git"
-        class="page-anchor">setting up an SSH
+        class="page-anchor-offset">setting up an SSH
         keypair</a>, which you
     can scroll down to read about.</p>
 <h3>Using git to work across multiple computers</h3>
@@ -337,7 +326,7 @@ int main(void) {
         important</strong> to do
     - if you don't, and realise too late, you'll have to deal with resolving what's called a merge conflict.</p>
 <p><a href="http://bit.ly/GitGud2020Slides">Learn more about Git from the slides from this CSESoc workshop.</a>
-</p> <img style="max-width:100%" src="/assets/images/blog/cse-setup/git.jpg" alt="Git" />
+</p> <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/git.jpg" alt="Git" />
 <h2 id="ssh-vsc">Using SSH keypairs to access CSE machines with VSCode</h2>
 <div class="alert alert-info">These instructions are written for Windows 10, macOS and Linux.</div>
 <p>Following these instructions will mean you won't be asked for a password each time you open an SSH window,
@@ -417,7 +406,7 @@ Voila! You had it a bit easier here.
 <h4>Part 3: Telling VSCode on your computer to use your new keys</h4>
 <ol>
 
-    <li><strong>On your local machine, open the SSH menu in VSCode.</strong> Click <img src="/assets/images/blog/cse-setup/ssh-icon.jpg"
+    <li><strong>On your local machine, open the SSH menu in VSCode.</strong> Click <img class="post-image" src="/assets/images/blog/cse-setup/ssh-icon.jpg"
             alt="SSH icon" />, then <strong>Open Configuration File</strong>, and select the first option. You
         should see something like this:<br>
         <pre>
@@ -477,7 +466,7 @@ Host vscode.cse.unsw.edu.au
         mixed up if you add more computers.</li>
     <li><strong>Paste the public key you copied earlier.</strong> Press Add when you are done.</li>
 </ol>
-<img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-github.jpg" alt="GitHub" />
+<img class="post-image" style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-github.jpg" alt="GitHub" />
 <h3>Part 3: Updating your local repositories</h3>
 <p>If you already have any local repositories, you need to update them to use the SSH Git path. To do this,
     <code>cd</code> to the directory, and enter
@@ -487,7 +476,7 @@ Host vscode.cse.unsw.edu.au
     ever unsure as to the SSH path, you can check
     on GitHub.
 </p>
-<img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-repo.jpg" alt="SSH key for a repo" />
+<img class="post-image" style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-repo.jpg" alt="SSH key for a repo" />
 <h2>Help! I'm stuck (or I have feedback for you)</h2>
 <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me! My details
     are at the bottom of this page.<br>
@@ -500,20 +489,9 @@ Host vscode.cse.unsw.edu.au
     for looking over this and/or providing suggestions.</p>
 <h6>Created on 11 April 2020. Last updated on 30 August 2020.</h6>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
-<script>
-$('.page-anchor').click(function (e) {
-    e.preventDefault();
-    var aid = $(this).attr("href");
-    $('html,body').animate({
-        scrollTop: $(aid).offset().top
-    }, 'slow');
-});
 </script>

@@ -2,7 +2,7 @@
     <div class = "showcase-item" id = "sc-{{ include.data.short }}">
         <div class="showcase-text">
             <div class="showcase-type">{{ include.type }}</div>
-            <div class="showcase-title">{{ include.data.title }}</div>
+            <div class="showcase-title">{{ include.data.title }}{% if include.type == "Post" %}.{% endif %}</div>
             <div class="showcase-duration">{{ include.data.time }}</div>
             <div class="showcase-desc">{{ include.data.desc }}</div>
         </div>

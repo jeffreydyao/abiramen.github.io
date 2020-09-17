@@ -2,6 +2,6 @@ sass:
   sass_dir: assets/css
 plugins:
   - jekyll-seo-tag
-title: abiramen's site
-description: The personal site of @abiramen on GitHub.
+title: the ramen space
+description: The personal site of @abiramen.
 logo: /assets/images/ramen-bricks.png

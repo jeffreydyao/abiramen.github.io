@@ -9,12 +9,12 @@ navtype: standard
         <ul id = "project-list">
         {% for project in site.data.projects %} 
                 <li class = "project-item">
-                    <a href = "{{ project.permalink }}" target="_blank"><span class="project-title">{{ project.title }} <span class="icon">arrow_right_alt</span></span></a><br>
+                    <a href = "{{ project.permalink }}" target="_blank"><span class="project-title">{{ project.title }} <span class="icon">keyboard_arrow_right</span></span></a><br>
                     <div class = "project-desc">{{ project.desc }}</div>
                     <span class="project-time">( {{ project.time }} )</span>
                 </li>
                 {% endfor %}
         </ul>
-        <h3 class="ralign"><a href="https://github.com/abiramen" target="_blank">Visit my GitHub <span class="icon">arrow_right_alt</span></a></h3>
+        <h3 class="ralign"><a href="https://github.com/abiramen" target="_blank">Visit my GitHub <span class="icon">keyboard_arrow_right</span></a></h3>
     </div>
 </section>

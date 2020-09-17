@@ -2,10 +2,9 @@
 ---
 
 @import "bootstrap/bootstrap";
-
 $bg: #111111;
 
-body {
+html, body {
     background-color: $bg;
     color: #e9e9e9;
     overflow-x: hidden;
@@ -13,65 +12,18 @@ body {
     font-weight: 500;
     font-size: 16px;
     z-index: 1;
+    scroll-behavior: smooth;
 }
 
-nav {
-    padding-top: 10px;
-    width: 100%;
-    position: fixed;
-    background-color: $bg;
-    z-index: 9999;
-}
+@import "blog";
+@import "navbar";
 
-@media only screen and (min-width: 800px) {
-    nav #nav-right a {
-        font-size: 20px;
-    }
-}
-
-#nav-right {
-    line-height: 60px;
-}
-
-nav #nav-right a {
-    color: white;
-    font-size: 21px;
-    font-family: 'Metropolis';
-    font-weight: bold;
-    padding-right: 6px;
-    padding-left: 6px;
-    line-height: 1.5;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-@media only screen and (max-width: 800px) {
-    nav .container {
-        max-width: 1200px;
-    }
-}
-
-#nav-border {
-    display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 10px;
-    background: #e9e9e9;
-    margin: 0 auto;
-    margin-top: 3px;
-    clear: both;
-}
-
-#navbar-logo {
-    float: left;
-}
-
-#nav-right {
-    float: right;
-}
-
-#logo {
-    height: 60px;
+.splash {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #landing-splash {
@@ -80,14 +32,7 @@ nav #nav-right a {
     background-size: 130% 130%;
     animation-delay: -1s;
     animation: AnimateSplash 2s ease infinite;
-    
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
-
 
 @keyframes AnimateSplash {
     0% {background-position:0% 10%}
@@ -95,11 +40,11 @@ nav #nav-right a {
     100% {background-position:0% 10%}
 }
 
-
 #splash-text {
     color: #263540;
     font-size: 1.8em;
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 #splash-title {
@@ -113,6 +58,19 @@ nav #nav-right a {
 #splash-name {
     font-weight: 800;
 }
+
+#scroll-arrow {
+    text-decoration: none;
+    font-size: 4em;
+    color: #263540;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+#scroll-arrow:hover {
+    transform: scale(1.05);
+}
+
 
 h1, h2, h3 {
     font-family: 'Metropolis';
@@ -182,7 +140,6 @@ h3 {
 .showcase-anchor {
     color: white;
     text-decoration: none !important;
-    
 }
 
 a .showcase-item:hover {
@@ -192,7 +149,7 @@ a .showcase-item:hover {
 
 #showcase-section {
     background: url("/assets/images/brickwall.png");
-    padding-top: 100px;
+    padding-top: 130px;
     padding-bottom: 100px;
 }
 
@@ -202,7 +159,7 @@ a .showcase-item:hover {
 }
 
 #projects-section {
-    padding-top: 70px;
+    padding-top: 130px;
     padding-bottom: 70px;
 }
 
@@ -267,4 +224,15 @@ footer #ramen-footer {
     font-size: 10px;
     color: #666;
     text-align: center;
+}
+
+a {
+    color: #007bff;
+    transition: color 0.2s
+}
+
+a:hover {
+    color: #2a2dd4;
+    text-decoration: underline;
+    cursor: pointer;
 }
