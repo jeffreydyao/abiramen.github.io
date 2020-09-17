@@ -2,30 +2,18 @@ var nav_hidden = false;
 var monochrome = false;
 var transparency = false;
 
-$(document).ready(function() {
-	scrollHandler();
-	console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
-});
+function setScrollHandler(bricks) {
+	if (bricks) {
+		$(window).scroll(brickHandler);
+		brickHandler();
+	} else {
+		$(window).scroll(splashHandler);
+		splashHandler();
+	}
 
-$(window).scroll(scrollHandler);
+}
 
-$('.page-anchor-offset').click(function (e) {
-    e.preventDefault();
-    var aid = $(this).attr("href");
-    $('html,body').animate({
-        scrollTop: $(aid).offset().top - 90
-    }, 'fast');
-});
-
-$('.page-anchor').click(function (e) {
-	e.preventDefault();
-    var aid = $(this).attr("href");
-    $('html,body').animate({
-		scrollTop: $(aid).offset().top
-    }, 'fast');
-});
-
-function scrollHandler() {
+function scrollCore() {
 	let scroll = $(this).scrollTop();
 	let text_top = $("#splash-text").offset().top;
 	var text_bottom = text_top + $("#splash-text").outerHeight(true);
@@ -40,9 +28,24 @@ function scrollHandler() {
 		}, 150);
 		nav_hidden = true;
 	}
+	return scroll;
+}
+
+function brickHandler() {
+	let scroll = scrollCore();
+	
+	let brick_bottom = $("#post-splash").offset().top + $("#post-splash").outerHeight(true);
+	if (transparency && scroll > brick_bottom) {
+		toggleTransparencyOff();
+	} else if (!transparency && scroll < brick_bottom) {
+		toggleTransparencyOn();
+	}
+}
+
+function splashHandler() {
+	let scroll = scrollCore();
 
 	let splash_bottom = $("#landing-splash").offset().top + $("#landing-splash").outerHeight(true);
-
 	if (monochrome && scroll > splash_bottom - 50) {
 		toggleMonochromeOff();
 	} else if (!monochrome && scroll < splash_bottom - 50) {
