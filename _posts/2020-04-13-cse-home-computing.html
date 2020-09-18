@@ -5,7 +5,7 @@ title: home computing setup
 time: 13 April 2020
 last-update: 18 September 2020
 layout: post
-desc: I wrote this guide for UNSW CSE students to set up their own computers for an optimal coding experience.
+desc: If you're here, you're most likely a CSE student, or you're taking a CSE course. The goal of this post is to introduce you to Visual Studio Code, and SSH! There's also a fun bonus section if you make it to the end :)
 ---
 <style>
     .card {
@@ -39,57 +39,65 @@ desc: I wrote this guide for UNSW CSE students to set up their own computers for
     }
 </style>
 
-<p>I wrote this up back during 20T1, but uploaded it to my website to hopefully help students that are new to
-    CSE courses :)
-    <br>Not all of this may be that helpful to you if the only CSE course you ever intend to take is COMP1511 -
-    I
-    suspect that most people will only need to set up VSCode to use SSH.<br><br>
-    However if you are planning to do more COMP courses in the future (especially if you're doing a CSE degree
-    or DataSci), you're inevitably
-    going to be doing some of this eventually, and you'll be able to make use of your setup for the next few
-    years!</p>
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Summary (clicking links will take you to the relevant section)</h5>
-        I work across two of my own computers as well as the physical CSE computers. I use <a href="#vsc"
-            class="page-anchor-offset">SSH via VSCode</a> if I want
-        to work on the CSE machines, or I use the
-        <a href="#wsl" class="page-anchor-offset">Windows Subsystem for Linux (WSL)</a> if I want to work on my local
-        machine, especially if I'm on a bus or a
-        train. I use a <a href="#git-github" class="page-anchor-offset">GitHub repository</a> to sync code between my
-        two devices and the CSE machine. I never need
-        to
-        enter passwords because I use <a href="#ssh-vsc" class="page-anchor-offset">SSH-RSA</a> keys.
-    </div>
-</div>
-<h2 id="vsc">Working on CSE machines over SSH with VSCode</h2>
-<p>This should be applicable to people across all operating systems. However, if you're on macOS, use
-    <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.</p>
-<h4>Yeah, but what's this SSH thing you speak of?</h4>
-<p>In your first week of COMP1511, you may have been introduced to something called <a
-        href="https://taggi.cse.unsw.edu.au/FAQ/Really_quick_guide_to_VLAB/" target="_blank"
-        rel="noopener noreferrer">VLAB</a>, which lets you connect to the School of CSE's computing servers over
-    a visual interface (or 'GUI'). However, this can often feel less efficient, and may also be affected by
-    compression and other latency issues if your <abbr
-        title="I'm looking at you, Vodafone-4G-on-the-T1-Western-line.">internet connection isn't great</abbr>.
-    Thankfully, some cool computer scientists created a protocol called SSH (short for Secure Shell), allowing
-    you to communicate with remote computers over the terminal. Visual Studio Code, a really popular <abbr
-        title="A text editor is a tool which allows you to edit the contents of file, such as a C file. You may have used gedit already!">text
-        editor</abbr>, uses SSH to let you edit files on other computers, such as the CSE computers.</p>
-<h4>Sounds epic, how do I set it up?</h4>
+Hi there! If you're new here, welcome to CSE! We're going to be setting up vscode to communicate with CSE computers.
+
+<h2>Why are we doing this?</h2>
+
+<p>
+    You've likely used a program called TigerVNC to connect to the School of CSE's computers before, which provides a
+    visual interface (or 'GUI'). This provides you with a full desktop environment. The experience you get out of this
+    is very similar to the experience you would get out of sitting in front of a physical computer on campus.
+    <br><br>
+    If you're in 1511, I would strongly advise you to use the Xfce desktop environment and gedit over TigerVNC for the
+    first week, just to familiarise yourself with it. Don't take your experience with it as a sign that Linux has to be
+    ugly either - <a href="https://reddit.com/r/unixporn" target="_blank">this subreddit has plenty of proof otherwise.</a>
+    (Despite the name, I promise it's safe for work.)
+    <br><br>
+    More importantly, under normal circumstances, you would be doing your exams in front of a similarly configured
+    physical computer on campus. As of 2020 however, you're generally free to use whatever setup you wish.
+    <br><br>
+    The solution we're about to go through provides a more seamless coding experience without having to load a full
+    visual interface from CSE computers. This has the added benefits of not being affected by compression, especially if
+    you have a poor connection, and other latency issues.
+</p>
+
+<h2>Getting started</h2>
+
+<p>
+    First of all, we're going to acquaint ourselves with Visual Studio Code, or vscode. You've likely been introduced to
+    a tool called gedit which allows you to write files of text (including code), or what's called a text editor. vscode
+    does this, but it provides many more great features on top. To get started, you'll need to install vscode on your
+    own computer, whether it be Windows, macOS or Linux.
+</p>
+    <ol>
+        <li><strong>Download and install Visual Studio Code.</strong> You can find a download <a target="_blank"
+            href="https://code.visualstudio.com/download">here.</a></li>
+        <li><strong>If prompted to do so during the installation process,</strong> select the checkbox which says
+        'Add to PATH'.</li>
+        <li><strong>Restart your computer once you're done.</strong></li>
+    </ol>
+<p>
+    You should now have vscode installed! You can now edit files on your own computer, but that's not quite what we want - our goal is to edit files on CSE machines.
+</p>
+
+<h2>Our friend, SSH</h2>
+<p>
+    Some cool computer scientists invented a way (or more specifically, a set of rules, or protocols) to allow you to communicate with remote computers over the internet. This allows us to edit files on another computer, such as the CSE servers, and run commands through a terminal on CSE servers.
+    <br><br>
+    Luckily for us, vscode has a way to use SSH to allow you to edit files and run commands on other computers.
+</p>
+
 <ol>
-    <li><strong>Download and install Visual Studio Code.</strong> You can find a download <a target="_blank"
-            rel="noopener noreferrer" href="https://code.visualstudio.com/download">here.</a> When prompted to
-        do so during the install process, select to 'Add to PATH'. <strong>Restart your computer once you're
-            done.</strong></li>
+    <li><strong>Open vscode.</strong></li>
     <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
-    <li><strong>Search for and install the Remote-SSH extension.</strong> While you're here, you should also
-        install the <strong>C/C++</strong> extension by Microsoft. Once this is done, you might be prompted to
+    <li><strong>Search for and install the Remote-SSH extension.</strong> Once this is done, you might be prompted to
         reload the window.</li>
     <li>
         <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img
-            src="/assets/images/blog/cse-setup/ssh-icon.jpg" alt="SSH icon" /> in the bottom left. The menu should look like this:<br>
-        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu.jpg" alt="SSH menu" />
+            src="/assets/images/blog/cse-setup/ssh-icon.jpg" alt="SSH icon" /> in the bottom left. The menu should look
+        like this:<br>
+        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu.jpg"
+            alt="SSH menu" />
     </li>
     <li>
         <strong>Click Connect to Host.</strong> In the field that shows up, type in
@@ -113,7 +121,8 @@ desc: I wrote this guide for UNSW CSE students to set up their own computers for
     <li>
         <strong>You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.</strong> Now you don't have to
         type it in each time.
-        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu-2.jpg" alt="SSH menu" />
+        <img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/ssh-menu-2.jpg"
+            alt="SSH menu" />
     </li>
     <li>If you want to avoid having to enter your password each time, scroll down to <a href="#ssh-vsc"
             class="page-anchor-offset">Using
@@ -121,7 +130,8 @@ desc: I wrote this guide for UNSW CSE students to set up their own computers for
             keypairs</a>.</li>
 </ol>
 <h3>Other cool VSCode things</h3>
-<img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/vscode.jpg" alt="My VSCode over SSH" />
+<img style="max-width:100%" class="post-image" src="/assets/images/blog/cse-setup/vscode.jpg"
+    alt="My VSCode over SSH" />
 <h4>Editor rulers</h4>
 <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and
     it's good
@@ -226,8 +236,8 @@ desc: I wrote this guide for UNSW CSE students to set up their own computers for
     <li><strong>Search for Windows Terminal and install it.</strong> Once installed, you can open it by entering
         <code>wt</code> or searching Windows Terminal in Search.</li>
     <li><strong>If you want, you can adjust settings.</strong> If you know how to read a JSON file, use
-        <kbd>Ctrl+,</kbd> to access settings. You can even find themes <a target="_blank"
-            rel="noopener noreferrer" href="https://terminalsplash.com">here</a>.</li>
+        <kbd>Ctrl+,</kbd> to access settings. You can even find themes <a target="_blank" rel="noopener noreferrer"
+            href="https://terminalsplash.com">here</a>.</li>
 </ol>
 <h2 id="git-github">Setting up Git and GitHub</h2>
 Git is a really useful tool which allows you backup your code, revert to older versions, keep track of changes,
@@ -406,8 +416,9 @@ Voila! You had it a bit easier here.
 <h4>Part 3: Telling VSCode on your computer to use your new keys</h4>
 <ol>
 
-    <li><strong>On your local machine, open the SSH menu in VSCode.</strong> Click <img src="/assets/images/blog/cse-setup/ssh-icon.jpg"
-            alt="SSH icon" />, then <strong>Open Configuration File</strong>, and select the first option. You
+    <li><strong>On your local machine, open the SSH menu in VSCode.</strong> Click <img
+            src="/assets/images/blog/cse-setup/ssh-icon.jpg" alt="SSH icon" />, then <strong>Open Configuration
+            File</strong>, and select the first option. You
         should see something like this:<br>
         <pre>
 Host vscode.cse.unsw.edu.au
@@ -476,9 +487,11 @@ Host vscode.cse.unsw.edu.au
     ever unsure as to the SSH path, you can check
     on GitHub.
 </p>
-<img class="post-image" style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-repo.jpg" alt="SSH key for a repo" />
+<img class="post-image" style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-repo.jpg"
+    alt="SSH key for a repo" />
 <h2>Help! I'm stuck (or I have feedback for you)</h2>
-<p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me! My details
+<p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me! My
+    details
     are at the bottom of this page.<br>
     You can also contact me if you're stuck and need help.
 </p>
@@ -489,8 +502,8 @@ Host vscode.cse.unsw.edu.au
     for looking over this and/or providing suggestions.</p>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
