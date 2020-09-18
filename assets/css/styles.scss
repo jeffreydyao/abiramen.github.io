@@ -89,7 +89,7 @@ h3 {
     text-align: right;
 }
 
-.ralign a, li a, .project-item a {
+.ralign a, .project-item a {
     color: white;
 }
 
@@ -138,8 +138,12 @@ h3 {
 }
 
 .showcase-anchor {
-    color: white;
+    color: white !important;
     text-decoration: none !important;
+}
+
+.showcase-anchor:hover {
+    color: white !important;
 }
 
 a .showcase-item:hover {
@@ -227,12 +231,13 @@ footer #ramen-footer {
 }
 
 a {
-    color: #007bff;
+    color: #98cade;
     transition: color 0.2s
 }
 
 a:hover {
-    color: #2a2dd4;
+    color: #d6a2c5;
+    // color: #2a2dd4;
     text-decoration: underline;
     cursor: pointer;
 }
