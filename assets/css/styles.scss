@@ -15,7 +15,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-@import "blog";
 @import "navbar";
 
 .splash {
@@ -89,7 +88,7 @@ h3 {
     text-align: right;
 }
 
-.ralign a, .project-item a {
+.ralign a, .descripted-item a {
     color: white;
 }
 
@@ -162,7 +161,7 @@ a .showcase-item:hover {
     padding-bottom: 50px;
 }
 
-#projects-section {
+#page-section {
     padding-top: 130px;
     padding-bottom: 70px;
 }
@@ -171,7 +170,7 @@ a .showcase-item:hover {
     margin-bottom: 50px;
 }
 
-.project-item {
+.descripted-item {
     margin: 30px 0 30px 0;
 }
 
@@ -185,7 +184,7 @@ a .showcase-item:hover {
     font-size: 16px;
 }
 
-.project-desc {
+.item-desc {
     font-size: 20px;
 }
 
@@ -231,13 +230,21 @@ footer #ramen-footer {
 }
 
 a {
-    color: #98cade;
+    color: #99ecfa;
     transition: color 0.2s
 }
 
 a:hover {
     color: #d6a2c5;
-    // color: #2a2dd4;
     text-decoration: underline;
     cursor: pointer;
+}
+
+#click-the-small-footer-text-to-reveal-me {
+    display: none;
+    margin: 50px 0 50px 0;
+}
+
+#flag-result {
+    margin: 15px 0 15px 0;
 }
