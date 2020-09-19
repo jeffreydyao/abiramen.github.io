@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/tags.css"/>
+
+<div id="page-section" class="container">
+  <h1>posts tagged with {{ page.tag-name }}.</h1>
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag-name %}
+      {% include snippet.html post=post %}
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="ralign"><a href="/tags">View all tags <span class="icon">keyboard_arrow_right</span></a></h3>
+  <h3 class="ralign"><a href="/blog">View all posts <span class="icon">keyboard_arrow_right</span></a></h3>
+</div>

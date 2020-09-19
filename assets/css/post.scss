@@ -1,0 +1,66 @@
+---
+---
+#post-splash {
+    background: #101010;
+    background-image: url("/assets/images/brickwall.png");
+}
+
+.post-desc, .post-arrow {
+    color: white !important;
+}
+
+#post-title {
+    font-size: 2.4em;
+    line-height: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#post-desc {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+#post-head {
+    font-weight: 400;
+    font-size: 0.55em;
+    text-transform: uppercase;
+}
+
+#post-contents{
+    margin: 90px auto 90px auto;
+    font-size: 1.2em;
+}
+
+#post-contents img {
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+#post-contents img .inline-img {
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+
+pre {
+    background: #151515;
+    color: #d6a2c5;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Cascadia Code';
+}
+
+code {
+    color:  #d6a2c5;
+    font-family: 'Cascadia Code';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Metropolis';
+}
+
+.alert {
+    background-color: transparent;
+}

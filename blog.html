@@ -3,23 +3,15 @@ layout: default
 title: blog
 navtype: standard
 ---
-<section id="projects-section">
-    <div class="container">
-        <h2>posts.</h2> 
-        <ul id = "project-list">
-        {% for post in site.posts %} 
-            <li class = "project-item">
-                <a href = "{{ post.permalink }}"><span class="project-title">{{ post.title }}. <span class="icon">keyboard_arrow_right</span></span></a><br>
-                <div class = "project-desc">{{ post.desc }}</div>
-                <span class="project-time">
-                    {% if post.last-update != ""%}
-                    Updated {{ post.last-update }}. First posted {{ post.time }}. 
-                    {% else %}
-                    Posted {{ post.time }}.
-                    {% endif %}
-                </span>
-            </li>
-        {% endfor %}
-        </ul>
-    </div>
+
+<link rel="stylesheet" href="/assets/css/tags.css"/>
+
+<section id="page-section" class="container">
+    <h2>posts.</h2> 
+    <ul id = "project-list">
+    {% for post in site.posts %} 
+        {% include snippet.html post=post %}
+    {% endfor %}
+    </ul>
+    <h6 class="ralign"><a href="/feed.xml" target="_blank">RSS (Atom) feed<span class="icon">keyboard_arrow_right</span></a></h6>
 </section>

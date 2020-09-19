@@ -2,6 +2,11 @@ sass:
   sass_dir: assets/css
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
 title: the ramen space
 description: The personal site of @abiramen.
 logo: /assets/images/ramen-bricks.png
+collections:
+  tags:
+    output: true
+    permalink: tags/:path/
