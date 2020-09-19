@@ -36,7 +36,7 @@ Markdown-to-HTML converters out there, Jekyll just makes it seamless.
 If I ever require a page with server-side rendering, I can always host that on a separate domain. ralismark still says that Jekyll is great,
 although he does wish that he could server-side render LaTeX so that he doesn't need to do that on the client's device.
 ### Frontend frameworks
-Admittedly as a result of me still being stuck in my old ways (or just lazy), this site still uses jQuery in a few places. I intend on porting it all to
+Admittedly as a result of me still being stuck in my old ways (or just being lazy), this site still uses jQuery in a few places. I intend on porting it all to
 vanilla JavaScript at some point. I also made the mistake of deciding to use Bootstrap when I started writing this site - mainly for layout
 (responsive containers), but you can probably see, this site looks relatively un-Bootstrapish. I also intend on removing Bootstrap at some point,
 since most of the layout stuff shouldn't be too hard to reimplement myself.
