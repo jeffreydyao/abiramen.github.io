@@ -1,17 +1,17 @@
 ---
 layout: default
 title: projects
-navtype: standard
+navtype: plain
 ---
-<section id="projects-section">
+<section id="page-section">
     <div class="container">
         <h2>projects.</h2> 
         <ul id = "project-list">
         {% for project in site.data.projects %} 
-                <li class = "project-item">
+                <li class = "descripted-item">
                     <a href = "{{ project.permalink }}" target="_blank"><span class="project-title">{{ project.title }} <span class="icon">keyboard_arrow_right</span></span></a><br>
-                    <div class = "project-desc">{{ project.desc }}</div>
-                    <span class="project-time">( {{ project.time }} )</span>
+                    <div class = "item-desc">{{ project.desc }}</div>
+                    <span class="item-time">( {{ project.time }} )</span>
                 </li>
                 {% endfor %}
         </ul>
