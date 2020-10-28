@@ -3,13 +3,16 @@ permalink: /cse-setup
 short: cse-setup
 title: vscode and cse
 time: 13 April 2020
-last-update: 19 September 2020
+last-update: 29 October 2020
 layout: post
 tags: unsw-cse guide vscode
 desc: If you're here, you're most likely a CSE student, or you're taking a CSE course. The goal of this post is to introduce you to Visual Studio Code, and SSH! There's also a fun bonus section if you make it to the end. :)
 ---
 <p>
     Hi there! If you're new here, welcome to CSE! We're going to be setting up vscode to communicate with CSE computers.
+    <br>
+    If you followed an older version of this guide and are here to fix your connection's security, please 
+    <a href="#security">click here</a>. Otherwise, continue on :)
 </p>
 
 <h2>Why are we doing this?</h2>
@@ -61,18 +64,44 @@ desc: If you're here, you're most likely a CSE student, or you're taking a CSE c
     <br><br>
     Luckily for us, vscode has a way to use SSH to allow you to edit files and run commands on other computers.
 </p>
-
+<div class="alert">
+    If you're on macOS, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.
+</div>
+<h3>Part 1: Getting started</h3>
 <ol>
     <li><strong>Open vscode.</strong></li>
     <li><strong>Open the Extensions menu.</strong> You can access it using <kbd>Ctrl+Shift+X</kbd>.</li>
     <li><strong>Search for and install the Remote-SSH extension.</strong> Once this is done, you might be prompted to
-        reload the window.</li>
+        reload the window.
+    <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-extension.jpg" alt="Install the SSH extension." />
+    </li>
+</ol>
+
+<h3 id="security">Part 2: Improving security</h3>
+<div class="alert">Not performing this step can make your CSE account accessible to anyone while you're connected.
+    Accounts
+    that don't enable this will not be able to use vscode to connect to CSE computers in the future.</div>
+<ol>
+    <li><strong>Open the vscode settings pane.</strong> To do this, click the settings icon near the bottom left, or
+        use <kbd>Ctrl+,</kbd>.</li>
+    <li>
+        <strong>Search for 'Remote Server Listen on Socket'.</strong> Tick the corresponding checkbox once it
+        appears.
+        <img style="max-width:100%" src="/assets/images/blog/cse-setup/socket.jpg" alt="Enable the Remote Server Listen on Socket option" />
+    </li>
+    <li>
+        <strong>Search for 'Lockfiles In Tmp'.</strong> Again, select the corresponding checkbox.
+        <img style="max-width:100%" src="/assets/images/blog/cse-setup/lockfiles.jpg" alt="Lockfiles In Tmp" />
+    </li>
+</ol>
+<p>Congrats! You're now safer from nefarious hackers, or inadvertent intruders.</p>
+<h3>Part 3: Logging in </h3>
+<ol>
     <li>
         <strong>Open the Remote-SSH menu.</strong> This can be done by clicking this button <img
             src="/assets/images/blog/cse-setup/ssh-icon.jpg" alt="SSH icon" /> in the bottom left. The menu should look
         like this:<br>
-        <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-menu.jpg"
-            alt="SSH menu" />
+        <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-menu.jpg" alt="SSH menu" />
     </li>
     <li>
         <strong>Click Connect to Host.</strong> In the field that shows up, type in
@@ -101,8 +130,7 @@ desc: If you're here, you're most likely a CSE student, or you're taking a CSE c
         <strong>You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.</strong> This means you don't
         have to
         type it in each time.
-        <img style="max-width:100%"  src="/assets/images/blog/cse-setup/ssh-menu-2.jpg"
-            alt="SSH menu" />
+        <img style="max-width:100%" src="/assets/images/blog/cse-setup/ssh-menu-2.jpg" alt="SSH menu" />
     </li>
     <li>
         If you had an issue, scroll down to the <a href="#troubleshooting"
@@ -110,9 +138,9 @@ desc: If you're here, you're most likely a CSE student, or you're taking a CSE c
         section.
     </li>
 </ol>
+
 <h2>Making vscode even cooler</h2>
-<img style="max-width:100%"  src="/assets/images/blog/cse-setup/vscode.jpg"
-    alt="My vscode over SSH" />
+<img style="max-width:100%" src="/assets/images/blog/cse-setup/vscode.jpg" alt="My vscode over SSH" />
 <h3>Editor rulers</h3>
 <p>The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and
     it's good
@@ -150,7 +178,7 @@ desc: If you're here, you're most likely a CSE student, or you're taking a CSE c
 <p>vscode has heaps of themes and extensions. Some which I use:</p>
 <ul>
     <li><strong>C/C++ Snippets.</strong> Occasionally saves time with suggestions. Make sure to install from your
-    Remote-SSH window.</li>
+        Remote-SSH window.</li>
     <li><strong>Material Icon Theme.</strong></li>
     <li><strong>Dainty and Dainty - Material Theme.</strong> I personally use Dainty - Material Theme Ocean.
     </li>
@@ -242,7 +270,8 @@ desc: If you're here, you're most likely a CSE student, or you're taking a CSE c
 <h4>Part 3: Telling vscode on your computer to use your new keys</h4>
 <ol>
 
-    <li><strong>On your local machine, open the SSH menu in vscode.</strong> Click the SSH icon in the bottom left, then <strong>Open Configuration
+    <li><strong>On your local machine, open the SSH menu in vscode.</strong> Click the SSH icon in the bottom left, then
+        <strong>Open Configuration
             File</strong>, and select the first option. You
         should see something like this:<br>
         <pre>
@@ -279,7 +308,8 @@ Host vscode.cse.unsw.edu.au
 <p>
     Even then, I would still recommend setting up your own local coding setup at some point. If you're new to coding
     and you're doing 1511 right now, I wouldn't say you should worry about this. However, if you do intend on going
-    on to study more CSE courses, I recommend that you come back over the break after term ends and <a href="/wsl-github">
+    on to study more CSE courses, I recommend that you come back over the break after term ends and <a
+        href="/wsl-github">
         check out this other post I wrote</a>, which goes through setting up a Linux development environment on your
     Windows 10 computer, and using Git and GitHub to keep copies of your work on different computers and the internet.
 </p>
@@ -290,16 +320,26 @@ Host vscode.cse.unsw.edu.au
 <ol>
     <li><strong>Log in to the CSE servers using TigerVNC.</strong></li>
     <li><strong>Open a terminal.</strong></li>
-    <li><strong>Run the following command: </strong><code>rm -r ~/.vscode-server</code>. Make sure to copy and paste this command carefully.</li>
+    <li><strong>Run the following command: </strong><code>rm -r ~/.vscode-server</code>. Make sure to copy and paste
+        this command carefully.</li>
 </ol>
 <p>
-    If this doesn't work, try some of the solutions <a href="https://stackoverflow.com/questions/59978826/why-ssh-connection-timed-out-in-vscode">at this link</a>.
+    If this doesn't work, try some of the solutions <a
+        href="https://stackoverflow.com/questions/59978826/why-ssh-connection-timed-out-in-vscode">at this link</a>.
 </p>
 
 <h2>Have feedback, or want to reach out?</h2>
 <p>If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me! My
     details are at the bottom of this page.
 </p>
+
+<h2>Official guide</h2>
+<p>
+    As of late October 2020, CSE now has an official guide available for using vscode to connect over SSH.
+    While the steps you've just followed cover what's in the guide, and should be up-to-date as of the time of writing,
+    you can find the official guide <a href="https://www.cse.unsw.edu.au/~learn/homecomputing/vscode/">here</a>.
+</p>
+
 <h2>Thanks to the following people</h2>
 <ul>
     <li><a href="https://github.com/ralismark">ralismark</a></li>
