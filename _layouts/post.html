@@ -9,7 +9,7 @@ layout: default
         <div id="splash-text" class="post-desc">
             <div id="post-head">
                 <span id="post-date">{{ page.time }} {% if page.last-update %} (Updated {{ page.last-update }}) {% endif %}</span>
-                {% if page.last-update %}
+                {% if page.show-read-time %}
                 ·
                 <div class="icon">schedule</div> {{ content | reading_time }} read
                 {% endif %}
