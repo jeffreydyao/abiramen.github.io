@@ -25,12 +25,17 @@
 #post-head {
     font-weight: 400;
     font-size: 0.55em;
-    text-transform: uppercase;
 }
 
 #post-contents{
     margin: 90px auto 90px auto;
     font-size: 1.2em;
+    max-width: 800px;
+}
+
+#post-time {
+    font-size: 0.55em;
+    font-weight: 400;
 }
 
 #post-contents img {

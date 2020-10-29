@@ -7,10 +7,13 @@ layout: default
 <div id="post-splash" class="splash">
     <div class="container">
         <div id="splash-text" class="post-desc">
-            <span id="post-head">
-                {{ page.time }} {% if page.last-update %} (Updated {{ page.last-update }}) {% endif %}
-            </span>
+            <div id="post-head">
+                <span id="post-date">{{ page.time }} {% if page.last-update %} (Updated {{ page.last-update }}) {% endif %}</span>
+                ·
+                <div class="icon">schedule</div> {{ content | reading_time }} read
+            </div>
             <div id="post-title">{{ page.title }}.</div>
+            <div id="post-time"></div>
             <div id="post-desc">{{ page.desc }}</div>
             <div id="post-tags">
                 Tags:
