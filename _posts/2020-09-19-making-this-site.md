@@ -6,6 +6,7 @@ time: 19 September 2020
 layout: post
 tags: meta
 desc: I had a lot of fun making this website! I'm going to step through some of the decisions I made in the process.
+show-read-time: yes
 ---
 Hi! If you're here, that means I've finally got around to fully completing my website! I purchased this domain 10
 months ago, mostly neglected it for 9 of those months, or was super indecisive about how I wanted to approach it, and
