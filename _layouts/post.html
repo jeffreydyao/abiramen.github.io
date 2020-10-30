@@ -1,28 +1,23 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="/assets/css/post.css"/>
-<link rel="stylesheet" href="/assets/css/tags.css"/>
+<link rel="stylesheet" href="/assets/css/post.css" />
+<link rel="stylesheet" href="/assets/css/tags.css" />
+<link rel="stylesheet" href="/assets/vendor/littlefoot/littlefoot.css" />
 
 <div id="post-splash" class="splash">
     <div class="container">
         <div id="splash-text" class="post-desc">
             <div id="post-head">
-                <span id="post-date">{{ page.time }} {% if page.last-update %} (Updated {{ page.last-update }}) {% endif %}</span>
-                {% if page.show-read-time %}
-                ·
-                <div class="icon">schedule</div> {{ content | reading_time }} read
-                {% endif %}
+                <span id="post-date">{{ page.time }} {% if page.last-update %} (Updated {{ page.last-update }}) {% endif %}</span> {% if page.show-read-time %} ·
+                <div class="icon">schedule</div> {{ content | reading_time }} read {% endif %}
             </div>
             <div id="post-title">{{ page.title }}.</div>
             <div id="post-time"></div>
             <div id="post-desc">{{ page.desc }}</div>
             <div id="post-tags">
-                Tags:
-                {% for tag in page.tags %}
-                {% assign tag_slug = tag | strip %}
-                <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug }}
-                    rel="category tag">
+                Tags: {% for tag in page.tags %} {% assign tag_slug = tag | strip %}
+                <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug }} rel="category tag">
                     <span class="post-tag">{{ tag }}</span>
                 </a>
                 {% endfor %}
@@ -37,12 +32,11 @@ layout: default
 
 <div id="post-contents" class="container">
     {{ content }}
-    <script src="https://utteranc.es/client.js"
-        repo="abiramen/site-utterances"
-        issue-term="pathname"
-        label="utteranc.es"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
+    <script src="https://utteranc.es/client.js" repo="abiramen/site-utterances" issue-term="pathname" label="utteranc.es" theme="preferred-color-scheme" crossorigin="anonymous" async>
     </script>
 </div>
+
+<script src="/assets/vendor/littlefoot/littlefoot.js"></script>
+<script type="application/javascript">
+    littlefoot.default();
+</script>
