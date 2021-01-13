@@ -10,3 +10,7 @@ collections:
   tags:
     output: true
     permalink: tags/:path/
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+highlighter: rouge
