@@ -17,7 +17,7 @@ Yeah, no. This article is going to assume that you've grown up with the Internet
 - you're some whiz and this is amateur stuff - yeah, I'm sorry ...
 
 ### La table des matières
-- [Curb your insecurity](#the-s-in-https){: .page-anchor-offset}
+- [Curb your insecurity](#curb-your-insecurity){: .page-anchor-offset}
 - [Passwords](#passwords){: .page-anchor-offset}
 - [Gone phishing](#to-catch-a-phish){: .page-anchor-offset}
 - [Multi-factor authentication](#multi-factor-authentication){: .page-anchor-offset}
