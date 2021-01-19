@@ -29,16 +29,14 @@
 		crossorigin="anonymous"></script>
 
 	<script src="/assets/js/common.js"></script>
-	<script src="/assets/js/splash.js"></script>
-	
-	<script>
-		{% if page.navtype == "splash" %}
-		setScrollHandler(false);
-		{% else if page.navtype != "plain" %}
-		setScrollHandler(true);
-		{% endif %}
+
+	{% if page.navtype != "plain" %}
+	<script src="/assets/js/navbar.js"></script>
+	<script type="application/javascript">
+	    setScrollHandler();
+	    littlefoot.default();
 	</script>
-	
+	{% endif %}
 	<!-- Google Analytics scripts added by the NSA -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128951835-2"></script>
 
