@@ -1,6 +1,4 @@
-$(document).ready(function() {
-	console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
-});
+console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
 
 $('.page-anchor-offset').click(function (e) {
     e.preventDefault();
