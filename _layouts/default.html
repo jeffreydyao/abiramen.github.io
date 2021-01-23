@@ -19,16 +19,12 @@
 	{{ content }}
 	
 	{% include footer.html %}
-	
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" 
-		crossorigin="anonymous"></script>
 
 	<script src="/assets/js/common.js"></script>
 
 	{% if page.navtype != "plain" %}
 	<script src="/assets/js/navbar.js"></script>
 	<script type="application/javascript">
-	    setScrollHandler();
 	    littlefoot.default();
 	</script>
 	{% endif %}
