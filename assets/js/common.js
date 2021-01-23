@@ -1,17 +1,9 @@
 console.log("Hello there, fellow hackerperson. 🕵️‍♂️🕵️‍♀️")
 
-$('.page-anchor-offset').click(function (e) {
-    e.preventDefault();
-    var aid = $(this).attr("href");
-    $('html,body').animate({
-        scrollTop: $(aid).offset().top - 90
-    }, 'fast');
-});
-
-$('.page-anchor').click(function (e) {
-	e.preventDefault();
-    var aid = $(this).attr("href");
-    $('html,body').animate({
-		scrollTop: $(aid).offset().top
-    }, 'fast');
+document.querySelectorAll('.page-anchor-offset').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var dest = document.querySelector(this.getAttribute('href'));
+        window.scroll(0, dest.offsetTop - 90);
+    });
 });
