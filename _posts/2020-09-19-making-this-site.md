@@ -1,7 +1,7 @@
 ---
 permalink: /making-site
 short: making-site
-title: making this site
+title: Making this site
 time: 19 September 2020
 last-update: 24 January 2021
 layout: post

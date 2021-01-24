@@ -4,7 +4,7 @@ title: tags
 ---
 <link rel="stylesheet" href="/assets/css/tags.css"/>
 <div id="page-section" class="container">
-    <h1>all tags.</h1>
+    <h2>All post tags.</h2>
     <ul>
       {% assign tags = site.posts | all_tags %}
       {% for tag in tags %}
@@ -18,5 +18,5 @@ title: tags
         </li>
       {% endfor %}
     </ul>
-    <h3 class="ralign"><a href="/blog">View all posts <span class="icon">keyboard_arrow_right</span></a></h3>
+    <h4 class="ralign"><a href="/blog">View all posts <span class="icon">keyboard_arrow_right</span></a></h4>
   </div>

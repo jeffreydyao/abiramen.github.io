@@ -1,7 +1,7 @@
 ---
 permalink: /security-guide
 short: security-guide
-title: the hitchhiker's guide to security
+title: The Hitchhiker's Guide to Security
 time: 15 January 2021
 layout: post
 tags: security
