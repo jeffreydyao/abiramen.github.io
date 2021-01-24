@@ -51,7 +51,6 @@
     margin: 0 !important;
 }
 
-
 pre {
     background: #151515;
     color: #d6a2c5;
@@ -94,6 +93,11 @@ h5 {
     box-shadow:
         0 0 1px 1px #ddd,  /* inner white */
         0 0 4px 4px #99ecfa; /* outer cyan */
+}
+
+.alert p {
+    margin: 0;
+    padding: 0;
 }
 
 img {
