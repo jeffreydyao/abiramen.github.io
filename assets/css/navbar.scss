@@ -1,5 +1,5 @@
 nav {
-    background-color: $navbar;
+    background-color: $bg;
     width: 100%;
     padding: 0;
     position: fixed;
@@ -51,5 +51,16 @@ nav #nav-right a {
 
 #logo {
     height: 3.5rem;
-    padding: 0.5rem;
+    padding: 0.7rem 0.4rem;
+}
+
+#nav-border {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #e9e9e9;
+    margin: 0 auto;
+    margin-top: 3px;
+    clear: both;
 }
