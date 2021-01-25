@@ -3,7 +3,7 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 24 January 2021
+last-update: 26 January 2021
 layout: post
 tags: unsw-cse guide vscode
 desc: If you're here, you're most likely taking a CSE course at UNSW. The goal of this post is to introduce you to Visual Studio Code, and SSH! There's also a fun bonus section if you make it to the end. :)
@@ -61,7 +61,7 @@ Not performing this step can make your CSE account accessible to anyone while yo
 
 Congrats! You're now safer from nefarious hackers, or inadvertent intruders.
 
-Note: If you're coming here from the older version of my guide, please switch to using **VS Code.cse.unsw.edu.au**, rather than login, wagner, weill or williams. If not you can ignore this.
+Note: If you're coming here from the older version of my guide, please switch to using **vscode.cse.unsw.edu.au**, rather than login, wagner, weill or williams. If not you can ignore this.
 
 ### Part 3: Logging in
 1. **Open the Remote-SSH menu.** This can be done by clicking this button
@@ -70,7 +70,7 @@ Note: If you're coming here from the older version of my guide, please switch to
    in the bottom left. The menu should look like this:
 
    ![SSH menu](/assets/images/blog/cse-setup/ssh-menu.jpg)
-1. **Click Connect to Host.** In the field that shows up, type in `z5555555@VS Code.cse.unsw.edu.au`, using your zID instead. Hit <kbd>Enter</kbd>.
+1. **Click Connect to Host.** In the field that shows up, type in `z5555555@vscode.cse.unsw.edu.au`, using your zID instead. Hit <kbd>Enter</kbd>.
     A new window will open.
 1. **If asked to select a remote platform**, select Linux.
 1. **Enter your password when prompted.** If your password is wrong, you will prompted to retry. Once you've done that, you should be connected successfully!
@@ -78,8 +78,8 @@ Note: If you're coming here from the older version of my guide, please switch to
     - Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal pane.
       This is exactly like a terminal window in TigerVNC. You can run <code>ls</code> to see your files!
 1. **We can save some time by adding this to our hosts list.** Click the SSH icon in the bottom left again, click Connect to Host, and this time, click **Add New SSH Host.**
-1. **Enter the following command:** `ssh z5555555@VS Code.cse.unsw.edu.au -A`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
-1. **You should now see VS Code.cse.unsw.edu.au on the Connect to Host menu.** This means you don't have to type it in each time.
+1. **Enter the following command:** `ssh z5555555@vscode.cse.unsw.edu.au -A`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
+1. **You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.** This means you don't have to type it in each time.
     [SSH menu](/assets/images/blog/cse-setup/ssh-menu-2.jpg)
 If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-anchor-offset} section.
 
@@ -167,8 +167,8 @@ Voila! You had it a bit easier here.
 1. **On your local machine, open the SSH menu in VS Code.** Click the SSH icon in the bottom left, then **Open Configuration File**, and select the first option. You should see something like this:
 
 ```
-Host VS Code.cse.unsw.edu.au
-    HostName VS Code.cse.unsw.edu.au
+Host vscode.cse.unsw.edu.au
+    HostName vscode.cse.unsw.edu.au
     User z5555555
     ForwardAgent yes
 ```
