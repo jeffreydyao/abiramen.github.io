@@ -22,29 +22,21 @@ navtype: plain
 
 <section id="showcase-section">
     <div class="container">
-        <h2>recent posts.</h2>
+        <h2>Recent posts and scribblings.</h2>
         
         {% assign project = site.posts[0] %}
         {% include showcase.html type="Post" data=project color="#d6a2c5"%}
         
+        {% assign project = site.posts[1] %}
+        {% include showcase.html type="Post" data=project color="#99ecfa"%}
         
         <h3 class="ralign"><a href="/blog">Read more here <span class="icon">keyboard_arrow_right</span></a></h3>
-    </div>
-
-    <div class="container">
-        <h2>recent projects.</h2>
-        
-        {% assign project = site.data.projects[0] %}
-        {% include showcase.html type="Project" data=project color="#99ecfa" %}
-        
-        
-        <h3 class="ralign"><a href="/projects">See more here <span class="icon">keyboard_arrow_right</span></a></h3>
     </div>
 </section>
 
 <section id = "faq-section">
     <div class="container">
-        <h2>foreseeably asked questions.</h2>
+        <h2>FAQs, but the F stands for Foreseeably.</h2>
         
         {% for question in site.data.faq %}
         <p>
