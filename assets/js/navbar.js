@@ -1,8 +1,6 @@
 var nav_hidden = false;
 var transparency = false;
 
-const $ = document.querySelector.bind(document);
-
 window.addEventListener("scroll", postHandler)
 postHandler();
 
