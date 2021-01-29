@@ -3,44 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | abiram.me</title>
-	<link rel="stylesheet" href="/assets/css/styles.css">
-	<link rel="stylesheet" href="/assets/fonts/fonts.css">
-	<link type="application/atom+xml" rel="alternate" href="/feed.xml">
-	<link rel="shortcut icon" href="/assets/images/ramen-bricks.png" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml">
+    <link rel="shortcut icon" href="/assets/images/ramen-bricks.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
       rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	{% seo %}
+    <meta name="theme-color" content="#000000"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% seo %}
   </head>
   <body>
-	
-	{% include navigation.html navtype=page.navtype %}
-	
-	{{ content }}
-	
-	{% include footer.html %}
+    
+    {% include navigation.html navtype=page.navtype %}
+    
+    {{ content }}
+    
+    {% include footer.html %}
 
-	<script src="/assets/js/common.js"></script>
+    <script src="/assets/js/common.js"></script>
 
-	{% if page.navtype != "plain" %}
-	<script src="/assets/js/navbar.js"></script>
-	<script type="application/javascript">
-	    littlefoot.default();
-	</script>
-	{% endif %}
-	<!-- Google Analytics scripts added by the NSA -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128951835-2"></script>
+    {% if page.navtype != "plain" %}
+    <script src="/assets/js/navbar.js"></script>
+    <script type="application/javascript">
+        littlefoot.default();
+    </script>
+    {% endif %}
+    <!-- Google Analytics scripts added by the NSA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128951835-2"></script>
 
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-128951835-2');
-	</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-128951835-2');
+    </script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-		crossorigin="anonymous"></script>
-			
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+        crossorigin="anonymous"></script>
+            
   </body>
 </html>
