@@ -3,10 +3,10 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 26 January 2021
+last-update: 30 January 2021
 layout: post
 tags: unsw-cse guide vscode
-desc: If you're here, you're most likely taking a CSE course at UNSW. The goal of this post is to introduce you to Visual Studio Code, and SSH! There's also a fun bonus section if you make it to the end. :)
+desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also a fun bonus section if you make it to the end!
 ---
 
 Hi there! If you're new here, welcome to CSE! We're going to be setting up a text editor called Visual Studio Code, or VS Code, to remotely work on the CSE computers without needing a VNC client!
