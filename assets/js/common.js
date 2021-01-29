@@ -21,7 +21,7 @@ $('#hamburger').addEventListener('click', () => {
 
 $('#overlay-close').addEventListener('click', () => {
     $('#overlay').style.opacity = "0";
-    document.documentElement.style.overflow = "scroll";
+    document.documentElement.style.overflow = "auto";
     document.body.scroll = "yes";
     setTimeout(() => {$('#overlay').style.height = "0";}, 200);
 })
