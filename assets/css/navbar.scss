@@ -106,8 +106,8 @@ nav #nav-right a {
 
 #overlay a, #overlay-close {
     padding: 0.5rem;
-    font-size: 2.4rem;
-    color: #ebebeb;
+    font-size: 2.2rem;
+    color: #e1fdff;
     display: block;
     transition: 0.2s;
 }
@@ -122,4 +122,13 @@ nav #nav-right a {
     right: 1.4rem;
     font-size: 4rem;
     cursor: pointer;
+}
+
+#overlay h3 {
+    font-size: 1.3rem;
+}
+
+#overlay-logo {
+    height: 4rem;
+    margin: 1rem;
 }
