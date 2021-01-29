@@ -69,12 +69,7 @@ nav #nav-right a {
     float: right;
     height: 3.5rem;
     padding: 1rem 1rem;
-}
-
-@media only screen and (min-width: 769px) {
-    #overlay {
-        display: none;
-    }
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -88,18 +83,43 @@ nav #nav-right a {
 }
 
 #overlay {
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999; 
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s;
+    background: radial-gradient(at bottom right, #1d151a, #0f161a);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-#overlay-links {
+#overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
 
+#overlay a, #overlay-close {
+    padding: 0.5rem;
+    font-size: 2.4rem;
+    color: #ebebeb;
+    display: block;
+    transition: 0.2s;
+}
+
+#overlay a:hover, #overlay-close:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+#overlay-close {
+    position: absolute;
+    right: 1.4rem;
+    font-size: 4rem;
+    cursor: pointer;
 }

@@ -11,3 +11,13 @@ document.querySelectorAll('.page-anchor-offset').forEach(anchor => {
         window.scroll(0, dest.offsetTop - nav_height);
     });
 });
+
+$('#hamburger').addEventListener('click', () => {
+    $('#overlay').style.height = "100%";
+    $('#overlay').style.opacity = "1";
+});
+
+$('#overlay-close').addEventListener('click', () => {
+    $('#overlay').style.height = "0";
+    $('#overlay').style.opacity = "0";
+})
