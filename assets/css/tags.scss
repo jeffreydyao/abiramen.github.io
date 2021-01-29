@@ -5,13 +5,13 @@
 }
 #post-tags {
     font-size: 16px;
-    margin-top: 10px;
+    line-height: 2rem;
     font-weight: bold;
 }
 
 .tag-link {
     font-weight: bold;
-    margin: 0 3px 0 3px;
+    margin: 0 0.15rem;
 }
 
 .tag-link:hover {
@@ -19,7 +19,8 @@
 }
 
 .post-tag {
-    padding: 5px 7px 5px 8px;
+    padding: 0.3rem 0.4rem 0.3rem 0.45rem;
+    margin: 0.2rem 0;
     background: #99ecfa;
     border-radius: 20px;
     color: #151515;

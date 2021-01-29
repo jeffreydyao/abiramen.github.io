@@ -16,10 +16,12 @@ $('#hamburger').addEventListener('click', () => {
     $('#overlay').style.height = "100%";
     $('#overlay').style.opacity = "1";
     $('body').style.overflow = "none";
+    $('head').style.overflow = "none";
 });
 
 $('#overlay-close').addEventListener('click', () => {
     $('#overlay').style.opacity = "0";
     $('body').style.overflow = "auto";
+    $('head').style.overflow = "auto";
     setTimeout(() => {$('#overlay').style.height = "0";}, 200);
 })
