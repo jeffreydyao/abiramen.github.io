@@ -196,9 +196,9 @@ If you're having trouble connecting to VS Code, a fix that tends to work is
 
 1. **Log in to the CSE servers using TigerVNC.**
 1. **Open a terminal.**
-1. **Run the following command:** `rm -r ~/.VS Code-server`. Make sure to copy and paste this command carefully.
+1. **Run the following command:** `rm -r ~/.vscode-server`. Make sure to copy and paste this command carefully.
 
-Alternatively, if you know how to open a Command Prompt/Terminal, you can run `ssh -t z5555555@cse.unsw.edu.au "rm -r ~/.VS Code-server"`, replacing with your own zID.
+Alternatively, if you know how to open a Command Prompt/Terminal, you can run `ssh -t z5555555@cse.unsw.edu.au "rm -r ~/.vscode-server"`, replacing with your own zID.
 
 If this doesn't work, try some of the solutions [here](https://stackoverflow.com/questions/59978826/why-ssh-connection-timed-out-in-VS Code){: target="_blank"}.
 
