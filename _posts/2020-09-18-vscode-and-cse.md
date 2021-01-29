@@ -86,7 +86,7 @@ If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-
 
 ## Making VS Code even cooler
 
-![My VS Code over SSH](/assets/images/blog/cse-setup/VS Code.jpg)
+![My VS Code over SSH](/assets/images/blog/cse-setup/vscode.jpg)
 
 ### Editor rulers
 The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and it's good practice to do so!). You can make VS Code show a handy little ruler to make sure your lines aren't too long.
