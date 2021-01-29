@@ -185,7 +185,7 @@ Once you've done this, you should be able to open Remote-SSH in VS Code without 
 
 If you need to add another public key to authorized_keys (for another computer), you can enter it on a new line.
 
-## Coding on your own computer{: #wsl}
+## Coding on your own computer
 
 This guide was once part of a much larger guide which involved setting up to allow you to code on your own computer. However, this was much more than what most 1511 students need. It's worth noting that you need to have an internet connection for SSH to work. If your train route has poor reception, and you want to code on the train, you would need an alternative.
 
