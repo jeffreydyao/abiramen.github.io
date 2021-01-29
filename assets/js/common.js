@@ -15,13 +15,13 @@ document.querySelectorAll('.page-anchor-offset').forEach(anchor => {
 $('#hamburger').addEventListener('click', () => {
     $('#overlay').style.height = "100%";
     $('#overlay').style.opacity = "1";
-    $('body').style.overflow = "none";
-    $('head').style.overflow = "none";
+    document.documentElement.style.overflow = "hidden";
+    document.body.scroll = "no";
 });
 
 $('#overlay-close').addEventListener('click', () => {
     $('#overlay').style.opacity = "0";
-    $('body').style.overflow = "auto";
-    $('head').style.overflow = "auto";
+    document.documentElement.style.overflow = "scroll";
+    document.body.scroll = "yes";
     setTimeout(() => {$('#overlay').style.height = "0";}, 200);
 })
