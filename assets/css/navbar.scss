@@ -72,7 +72,7 @@ nav #nav-right a {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #hamburger {
         display: block;
     }
@@ -92,7 +92,7 @@ nav #nav-right a {
     background: radial-gradient(at bottom right, #1d151a, #0f161a);
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
 }
 
 #overlay-content {
@@ -107,7 +107,7 @@ nav #nav-right a {
 #overlay a, #overlay-close {
     padding: 0.5rem;
     font-size: 2.2rem;
-    color: #e1fdff;
+    color: #faffff;
     display: block;
     transition: 0.2s;
 }
