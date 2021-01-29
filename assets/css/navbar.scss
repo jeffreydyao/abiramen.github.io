@@ -87,8 +87,6 @@ nav #nav-right a {
     width: 100%;
     position: fixed;
     z-index: 9999; 
-    left: 0;
-    top: 0;
     background: radial-gradient(at bottom right, #1d151a, #0f161a);
     overflow: hidden;
     opacity: 0;
@@ -96,12 +94,13 @@ nav #nav-right a {
 }
 
 #overlay-content {
-    position: relative;
-    top: 30%;
+    position: absolute;
+    top: 50%;
     width: 100%;
-    margin-top: 2rem;
     text-align: center;
     font-weight: 600;
+    transform: translateY(-50%);
+    vertical-align: middle;
 }
 
 #overlay a, #overlay-close {
