@@ -15,9 +15,11 @@ document.querySelectorAll('.page-anchor-offset').forEach(anchor => {
 $('#hamburger').addEventListener('click', () => {
     $('#overlay').style.height = "100%";
     $('#overlay').style.opacity = "1";
+    $('body').style.overflow = "none";
 });
 
 $('#overlay-close').addEventListener('click', () => {
-    $('#overlay').style.height = "0";
     $('#overlay').style.opacity = "0";
+    $('body').style.overflow = "auto";
+    setTimeout(() => {$('#overlay').style.height = "0";}, 200);
 })
