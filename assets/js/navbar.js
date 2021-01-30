@@ -1,10 +1,7 @@
-var nav_hidden = false;
-var transparency = false;
+let nav_hidden = false;
+let transparency = false;
 
-window.addEventListener("scroll", postHandler)
-postHandler();
-
-function postHandler() {
+const postHandler = () => {
     let scroll = window.scrollY;
     let text_top = $("#splash-text").offsetTop;
     var text_bottom = text_top + $("#splash-text").offsetHeight;
@@ -24,3 +21,6 @@ function postHandler() {
         transparency = true;
     }
 }
+
+window.addEventListener("scroll", postHandler)
+postHandler();
