@@ -8,7 +8,7 @@ tags: security
 desc: don't get hacked!
 ---
 
-**This is currently a draft version which I released for CompClub. Check back in a week for the complete version.**
+**This is currently a draft version which I released for CompClub. Check back in a month for the complete version.**
 
 _so remember, don't give out your name and personal information to strangers online !!_
 
