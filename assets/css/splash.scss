@@ -37,6 +37,10 @@
     margin-bottom: 1rem;
 }
 
+#splash-desc {
+    min-height: 2 * 1.5 * 1.6rem;
+}
+
 #splash-title {
     font-family: 'Metropolis';
     font-weight: bolder;
@@ -63,7 +67,7 @@
     transform: scale(1.06);
 }
 
-#flashing-cursor {
+.flashing-cursor {
     background: $pastel-blue;
     display: inline-block;
     width: 0.125rem;
