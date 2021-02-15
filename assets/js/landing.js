@@ -29,6 +29,12 @@ const typewrite = () => {
         char_count++;
         setTimeout(typewrite, base_speed * (1 + Math.random()) + (char_count === line_length) * 400);
     }
+
+    if ($('#splash-line2-hidden').innerHTML.length == 0) {
+        $('#splash-line2').innerHTML = "// i write ctfs with the <a href='https://unswsecurity.com' target='_blank'>unsw security society</a> for fun :)";
+    }
+
+    
 };
 
 
