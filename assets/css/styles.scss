@@ -177,12 +177,12 @@ footer #ramen-footer {
 }
 
 a {
-    color: #99ecfa;
+    color: $pastel-blue;
     transition: color 0.2s
 }
 
 a:hover {
-    color: #d6a2c5;
+    color: $pastel-pink;
     text-decoration: underline;
     cursor: pointer;
 }
