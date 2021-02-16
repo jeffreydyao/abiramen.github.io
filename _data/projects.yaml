@@ -1,17 +1,33 @@
-- title: CSESoc Website
-  time: April 2020 -
-  short: csesoc
-  desc: In my first major team project, I had the opportunity to improve my front and backend web development skills while fostering a DevOps culture.
-  permalink: https://github.com/csesoc/csesoc.unsw.edu.au/tree/dev/
-
-- title: UNSW SecSoc
-  time: April 2020 - 
-  short: secsoc 
-  desc: I explored my interests in security while on SecSoc's committee, writing Capture the Flag (CTF) challenges.
-  permalink: https://unswsecurity.com/
-
-- title: cr4sh-0verr1de
-  time: June 2020 - August 2020 
-  short: hackathon
-  desc: I participated in a team of five in hackathons ran by CSESoc to rapidly develop applications in a 24 hour period.
-  permalink: "https://github.com/cr4sh-0verr1ders" 
+- group: UNSW Security Society
+  link: https://unswsecurity.com
+  list:
+    - title: SecSoc CTF Director
+      time: January 2021 -
+      short: secsoc-2021
+      desc: "With the formation of subcommittees at the Security Society, I am looking forward to helping further expanding the society, starting with our <a href='https://github.com/unswsecuritysociety/2021-oweek-ctf' rel='noopener noreferrer nofollower'>O-Week CTF</a>."
+      permalink: https://unswsecurity.com/team
+    - title: SecSoc Committee
+      time: April 2020 - December 2020
+      short: secsoc-2020
+      desc: I had the opportunity to further explore my interests in security while on the Security Society's committee in my first year. My role involved writing CTFs, assisting with the running of the society, and most rewardingly, presenting at the Introduction to Security workshop and writing an accompanying CTF.
+      permalink: https://unswsecurity.com/team
+- group: UNSW CSE Society
+  link: https://csesoc.org.au
+  list:
+    - title: CSESoc Summer CompClub 2021
+      time: January 2021
+      short: compclub-2021
+      desc: I had the exciting opportunity to volunteer to help run a security workshop and write an accompanying CTF for high school students!
+      permalink: https://www.abiram.me/compclub-2021
+    - title: CSESoc Website
+      time: April 2020 - December 2020
+      short: csesoc-website
+      desc: In my first major team project, I had the opportunity to improve my front and backend web development skills while fostering a DevOps culture.
+      permalink: https://github.com/csesoc/csesoc.unsw.edu.au/tree/dev/
+- group: Hackathons
+  list:
+    - title: cr4sh-0verr1de
+      time: June 2020 - August 2020
+      short: cr4sh-0verr1de
+      desc: I participated in a team of five in hackathons ran by CSESoc to rapidly develop applications in a 24 hour period.
+      permalink: https://github.com/cr4sh-0verr1ders

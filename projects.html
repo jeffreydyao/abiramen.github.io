@@ -6,15 +6,24 @@ navtype: plain
 <section id="page-section">
     <div class="container">
         <h2>Projects, and other things I've worked on.</h2> 
-        <ul id = "project-list">
-        {% for project in site.data.projects %} 
+        {% for item in site.data.projects %} 
+        <h4>{{ item.group }}</h4>
+        {% for project in item.list %} 
+            <ul id = "project-list">
                 <li class = "descripted-item">
-                    <a href = "{{ project.permalink }}" target="_blank"><span class="project-title">{{ project.title }} <span class="icon">keyboard_arrow_right</span></span></a><br>
+                    <a href = "{{ project.permalink }}" target="_blank" rel="noopener noreferrer nofollow"><span class="project-title">{{ project.title }} <span class="icon">keyboard_arrow_right</span></span></a><br>
                     <div class = "item-desc">{{ project.desc }}</div>
                     <span class="item-time">( {{ project.time }} )</span>
                 </li>
-                {% endfor %}
-        </ul>
+            </ul>
+            {% endfor %}
+        {% endfor %}
         <h3 class="ralign"><a href="https://github.com/abiramen" target="_blank">Visit my GitHub <span class="icon">keyboard_arrow_right</span></a></h3>
     </div>
 </section>
+
+<style>
+    h2 {
+        margin-bottom: 2rem;
+    }
+</style>
