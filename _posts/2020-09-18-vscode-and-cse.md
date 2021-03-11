@@ -3,7 +3,7 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 30 January 2021
+last-update: 11 March 2021
 layout: post
 tags: unsw-cse guide vscode
 desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also a fun bonus section if you make it to the end!
@@ -207,7 +207,7 @@ If you've spotted an error, or have any suggestions or improvements that I can m
 
 ## Official guide
 
-As of late October 2020, CSE now has an official guide available for using VS Code to connect over SSH. While the steps you've just followed cover all of what's in the guide (and more!), and is up-to-date as of the time of writing, you can find the official guide [here](https://www.cse.unsw.edu.au/~learn/homecomputing/VS Code/){: target="_blank"}.
+As of late October 2020, CSE now has an official guide available for using VS Code to connect over SSH. While the steps you've just followed cover all of what's in the guide (and more!), and is up-to-date as of the time of writing, you can find the official guide [here](https://www.cse.unsw.edu.au/~learn/homecomputing/vscode/){: target="_blank"}.
 
 ## Acknowledgements
 
