@@ -3,10 +3,10 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 11 March 2021
+last-update: 25 May 2021
 layout: post
 tags: unsw-cse guide vscode
-desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also a fun bonus section if you make it to the end!
+desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also some bonus coins if you make it to the end.
 ---
 
 Hi there! If you're new here, welcome to CSE! We're going to be setting up a text editor called Visual Studio Code, or VS Code, to remotely work on the CSE computers without needing a VNC client!
@@ -78,11 +78,16 @@ Note: If you're coming here from the older version of my guide, please switch to
     - Use <kbd>Ctrl+`</kbd> (that's the key to the left of the number row) to open a terminal pane.
       This is exactly like a terminal window in TigerVNC. You can run <code>ls</code> to see your files!
 1. **We can save some time by adding this to our hosts list.** Click the SSH icon in the bottom left again, click Connect to Host, and this time, click **Add New SSH Host.**
-1. **Enter the following command:** `ssh z5555555@vscode.cse.unsw.edu.au -A`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
+1. **Enter the following command:** `ssh z5555555@vscode.cse.unsw.edu.au`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
 1. **You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.** This means you don't have to type it in each time.
     [SSH menu](/assets/images/blog/cse-setup/ssh-menu-2.jpg)
 If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-anchor-offset} section.
 
+### Part 4: vscode2 - Electric Boogaloo
+
+vscode.cse.unsw.edu.au connects you to a CSE server called `corelli`, which works fine most of the time. However, the server VS Code uses in order to form a connection is quite resource intensive, and can often eat up all the resources that `corelli` has available.
+
+Thankfully, CSE has set up a second server called `mandolin` you can use in case you're having issues with corelli. To set up your VS Code to be able to connect to `mandolin`, repeat Part 3, but replace all occurrences of `z5555555@vscode.cse.unsw.edu.au` with `z5555555@vscode2.cse.unsw.edu.au`. That's right, you just need to change `vscode` to `vscode2`. You can connect to `mandolin` if `corelli` ever feels slow.
 
 ## Making VS Code even cooler
 
@@ -170,7 +175,10 @@ Voila! You had it a bit easier here.
 Host vscode.cse.unsw.edu.au
     HostName vscode.cse.unsw.edu.au
     User z5555555
-    ForwardAgent yes
+
+Host vscode2.cse.unsw.edu.au
+    HostName vscode2.cse.unsw.edu.au
+    User z5555555
 ```
 
 1. **We need to tell the SSH connection to use our private key.** Add the following line to your config file, after the line with 'User' on it. Make sure to indent it so that it's in line with the others.
@@ -206,6 +214,8 @@ If this doesn't work, try some of the solutions [here](https://stackoverflow.com
 If you've spotted an error, or have any suggestions or improvements that I can make, feel free to contact me! My details are at the bottom of this page.
 
 ## Official guide
+
+Despite myself and the people being acknowledged below currently being employed by the School of CSE, this blogpost doesn't necessarily represent the views of my employer.
 
 As of late October 2020, CSE now has an official guide available for using VS Code to connect over SSH. While the steps you've just followed cover all of what's in the guide (and more!), and is up-to-date as of the time of writing, you can find the official guide [here](https://www.cse.unsw.edu.au/~learn/homecomputing/vscode/){: target="_blank"}.
 
