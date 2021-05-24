@@ -181,13 +181,27 @@ Host vscode2.cse.unsw.edu.au
     User z5555555
 ```
 
-1. **We need to tell the SSH connection to use our private key.** Add the following line to your config file, after the line with 'User' on it. Make sure to indent it so that it's in line with the others.
+1. **We need to tell the SSH connection to use our private key.** Add the following line to your config file, after each of the lines with 'User' on it. Make sure to indent it so that it's in line with the others.
     - **Windows:** Make sure to enter your username. If you don't know it, it's the part after `C:/Users/` when you open `cmd`.
 
         ```IdentityFile "C:/Users/[YOURUSERNAME]/.ssh/id_rsa"```
     - **Linux/macOS** 
 
         ```IdentityFile ~/.ssh/id_rsa```
+
+A potential completed config might look like this:
+
+```
+Host vscode.cse.unsw.edu.au
+    HostName vscode.cse.unsw.edu.au
+    User z5555555
+    IdentityFile "C:/Users/Bob/.ssh/id_rsa
+
+Host vscode2.cse.unsw.edu.au
+    HostName vscode2.cse.unsw.edu.au
+    User z5555555
+    IdentityFile "C:/Users/Bob/.ssh/id_rsa
+```
 
 Once you've done this, you should be able to open Remote-SSH in VS Code without requiring a password.
 
