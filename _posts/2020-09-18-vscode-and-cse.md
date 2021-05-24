@@ -25,7 +25,7 @@ The solution we're about to go through provides a more seamless coding experienc
 
 First of all, we're going to acquaint ourselves with Visual Studio Code, or VS Code. You've likely been introduced to a tool called gedit which allows you to write files of text (including code), or what's called a text editor. VS Code does this, but it provides many more great features on top. To get started, you'll need to install VS Code on your own computer, whether it be Windows, macOS or Linux.
 
-1. **Download and install Visual Studio Code.** You can find a download [here](https://code.visualstudio.com/download){:target="_blank"}
+1. **Download and install Visual Studio Code.** You can find a download [here](https://code.visualstudio.com/download){:target="_blank"}.
 1. **If prompted to do so during the installation process**, select the checkbox which says 'Add to PATH'.
 1. **Restart your computer once you're done.**
 
@@ -80,7 +80,7 @@ Note: If you're coming here from the older version of my guide, please switch to
 1. **We can save some time by adding this to our hosts list.** Click the SSH icon in the bottom left again, click Connect to Host, and this time, click **Add New SSH Host.**
 1. **Enter the following command:** `ssh z5555555@vscode.cse.unsw.edu.au`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
 1. **You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.** This means you don't have to type it in each time.
-    [SSH menu](/assets/images/blog/cse-setup/ssh-menu-2.jpg)
+    ![SSH menu](/assets/images/blog/cse-setup/ssh-menu-2.jpg)
 If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-anchor-offset} section.
 
 ### Part 4: vscode2 - Electric Boogaloo
