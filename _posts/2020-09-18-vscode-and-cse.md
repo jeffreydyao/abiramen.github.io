@@ -85,9 +85,13 @@ If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-
 
 ### Part 4: vscode2 - Electric Boogaloo
 
-vscode.cse.unsw.edu.au connects you to a CSE server called `corelli`, which works fine most of the time. However, the server VS Code uses in order to form a connection is quite resource intensive, and can often eat up all the resources that `corelli` has available.
+vscode.cse.unsw.edu.au connects you to a CSE server called `corelli`, which works fine most of the time. However, the server software VS Code uses in order to form a connection is quite resource intensive, and can often eat up all the resources that `corelli` has available.
 
-Thankfully, CSE has set up a second server called `mandolin` you can use in case you're having issues with corelli. To set up your VS Code to be able to connect to `mandolin`, repeat Part 3, but replace all occurrences of `z5555555@vscode.cse.unsw.edu.au` with `z5555555@vscode2.cse.unsw.edu.au`. That's right, you just need to change `vscode` to `vscode2`. You can connect to `mandolin` if `corelli` ever feels slow.
+Thankfully, CSE has set up a second server called `mandolin` you can use in case you're having issues with corelli.
+
+To set up your VS Code to be able to connect to `mandolin`, repeat Part 3, but replace all occurrences of `z5555555@vscode.cse.unsw.edu.au` with `z5555555@vscode2.cse.unsw.edu.au`. That's right, you just need to stick a `2` after `vscode`!
+
+You can connect to `mandolin` if `corelli` ever feels slow, which it might during assignment season.
 
 ## Making VS Code even cooler
 
