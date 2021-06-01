@@ -3,7 +3,7 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 25 May 2021
+last-update: 1 June 2021
 layout: post
 tags: unsw-cse guide vscode
 desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also some bonus coins if you make it to the end.
@@ -133,7 +133,7 @@ Congrats! You made it to the bonus section. Following these instructions will me
 1. **Generate a keypair.**  Use the command `ssh-keygen -t rsa -b 4096`.
 1. **You'll be asked where you want to save the key.** Leave this blank, and press <kbd>Enter</kbd>.
 1. **You'll be asked to set a password.** Leave this blank, and press <kbd>Enter</kbd> again. Do the same when you are asked to confirm it.
-1. **Using the same Command Prompt as before**, enter the command `code %userprofile%/.ssh/id_rsa.pub`. This should open up a file in VS Code, starting with ssh-rsa and followed by a long mess of characters. [^1] Don't close this file, but use <kbd>Ctrl+A Ctrl+C</kbd> to copy the entire contents of this file.
+1. **Using the same Command Prompt as before**, enter the command `code "%userprofile%/.ssh/id_rsa.pub"`. This should open up a file in VS Code, starting with ssh-rsa and followed by a long mess of characters. [^1] Don't close this file, but use <kbd>Ctrl+A Ctrl+C</kbd> to copy the entire contents of this file.
 
 [^1]: This actually represents an extremely large number, which is used to form a mathematical lock. This is called RSA encryption and you can learn more about it in MATH3411.
 
