@@ -1,14 +1,14 @@
 ---
 permalink: /security-guide
 short: security-guide
-title: The Hitchhiker's Guide to Security
+title: The Hitchhiker's Guide to Security (draft)
 time: 15 January 2021
 layout: post
 tags: security
 desc: don't get hacked!
 ---
 
-**This is currently a draft version which I released for CompClub. Check back in a month for the complete version.**
+**This is currently a draft version which I released for CompClub. I'll get around to finishing this, uh, soon™.**
 
 _so remember, don't give out your name and personal information to strangers online !!_
 
