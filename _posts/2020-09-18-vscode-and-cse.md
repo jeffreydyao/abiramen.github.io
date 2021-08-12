@@ -3,7 +3,7 @@ permalink: /cse-setup
 short: cse-setup
 title: CSE and VS Code
 time: 13 April 2020
-last-update: 1 June 2021
+last-update: 12 August 2021
 layout: post
 tags: unsw-cse guide vscode
 desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also some bonus coins if you make it to the end.
@@ -20,6 +20,10 @@ If you're currently doing COMP1511, I would strongly advise you to use the Xfce 
 More importantly, under normal circumstances, you would be doing your exams in front of a similarly configured physical computer on campus. As of the start of 2021 however, it seems you're generally free to use whatever setup you wish.
 
 The solution we're about to go through provides a more seamless coding experience without having to load a full visual interface from CSE computers. This has the added benefits of not being affected by compression, especially if you have a poor connection, and other latency issues.
+
+<div class="alert">
+I don't particularly recommend this for first years, but if you're a more experienced user with your own local setup, you might want to checkout this more lightweight method <a href="/cse-setup">here</a>.  
+</div>
 
 ## Getting started
 
