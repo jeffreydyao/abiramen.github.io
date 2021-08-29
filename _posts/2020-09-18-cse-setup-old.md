@@ -1,33 +1,36 @@
 ---
-permalink: /cse-setup
-short: cse-setup
-title: CSE and VS Code
+permalink: /cse-setup-old
+short: cse-setup-old
+title: CSE and VS Code (old)
 time: 13 April 2020
-last-update: 12 August 2021
+last-update: 28 August 2021
 layout: post
 tags: unsw-cse guide vscode
-desc: If you're a UNSW CSE student, this post is here to introduce you to Visual Studio Code, and SSH. There's also some bonus coins if you make it to the end.
+desc: This is now what we call a /bad idea/. Check out the new version of this post instead!
 ---
+
+{: .alert .alert-red}
+This method is now considered unreliable (especially during exam periods) due to the load it places on CSE servers, and will likely become unsupported by CSE eventually. Check out [this newer post](/cse-setup) instead.
 
 Hi there! If you're new here, welcome to CSE! We're going to be setting up a text editor called Visual Studio Code, or VS Code, to remotely work on the CSE computers without needing a VNC client!
 
 ## Why are we doing this?
 
-You've likely used a program called TigerVNC to connect to the School of CSE's computers before, which provides a visual interface (or 'GUI'). This provides you with a full desktop environment. The experience you get out of this is very similar to the experience you would get out of sitting in front of a physical computer on campus.
+You've likely used a program called TigerVNC to connect to the School of CSE's computers before, which provides you a visual interface with a full desktop environment, very similar to the experience you would get out of sitting in front of a physical computer on campus.
 
-If you're currently doing COMP1511, I would strongly advise you to use the Xfce desktop environment and gedit over TigerVNC for the first week, just to familiarise yourself with it. Don't take your experience with it as a sign that Linux has to be ugly either - [this subreddit has plenty of proof otherwise](https://reddit.com/r/unixporn){: target="_blank"}. (Despite the name, I promise it's safe for work.)
+If you're currently doing COMP1511, I would strongly advise you to use the provided desktop environment and gedit over TigerVNC for the first week, just to familiarise yourself with it. Don't take your experience with it as a sign that Linux has to be ugly either - [this subreddit has plenty of proof otherwise](https://reddit.com/r/unixporn){: target="_blank"}. (Despite the name, I promise it's safe for work.)
 
 More importantly, under normal circumstances, you would be doing your exams in front of a similarly configured physical computer on campus. As of the start of 2021 however, it seems you're generally free to use whatever setup you wish.
 
 The solution we're about to go through provides a more seamless coding experience without having to load a full visual interface from CSE computers. This has the added benefits of not being affected by compression, especially if you have a poor connection, and other latency issues.
 
 <div class="alert">
-I don't particularly recommend this for first years, but if you're a more experienced user with your own local setup, you might want to checkout this more lightweight method <a href="/cse-setup">here</a>.  
+I don't particularly recommend this for first years, but if you're a more experienced user with your own local setup, you might want to checkout this more lightweight method <a href="/cse-sshfs">here</a>.  
 </div>
 
 ## Getting started
 
-First of all, we're going to acquaint ourselves with Visual Studio Code, or VS Code. You've likely been introduced to a tool called gedit which allows you to write files of text (including code), or what's called a text editor. VS Code does this, but it provides many more great features on top. To get started, you'll need to install VS Code on your own computer, whether it be Windows, macOS or Linux.
+First of all, we're going to acquaint ourselves with Visual Studio Code, or VS Code. You've likely been introduced to a tool called gedit which allows you to write files of text (including code), or what's called a text editor. VS Code does th is, but it provides many more great features on top. To get started, you'll need to install VS Code on your own computer, whether it be Windows, macOS or Linux.
 
 1. **Download and install Visual Studio Code.** You can find a download [here](https://code.visualstudio.com/download){:target="_blank"}.
 1. **If prompted to do so during the installation process**, select the checkbox which says 'Add to PATH'.
@@ -48,7 +51,7 @@ If you're on macOS, use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd>.
 1. **Open VS Code.**
 1. **Open the Extensions menu.** You can access it using `Ctrl+Shift+X`.
 1. **Search for and install the Remote-SSH extension.** Once this is done, you might be prompted to reload the window.
-    ![Install the SSH extension.](/assets/images/blog/cse-setup/ssh-extension.jpg)
+    ![Install the SSH extension.](/assets/images/blog/cse-setup-old/ssh-extension.jpg)
 
 ### Part 2: Improving security
 
@@ -58,9 +61,9 @@ Not performing this step can make your CSE account accessible to anyone while yo
 
 1. **Open the VS Code settings pane.** To do this, click the settings icon near the bottom left, or use `Ctrl+,`.
 1. **Search for 'Remote Server Listen on Socket'.** Tick the corresponding checkbox once it appears.
-   ![Enable the Remote Server Listen on Socket option](/assets/images/blog/cse-setup/socket.jpg)
+   ![Enable the Remote Server Listen on Socket option](/assets/images/blog/cse-setup-old/socket.jpg)
 1. **Search for 'Lockfiles In Tmp'.** Again, select the corresponding checkbox.
-   ![Lockfiles in Tmp](/assets/images/blog/cse-setup/lockfiles.jpg)
+   ![Lockfiles in Tmp](/assets/images/blog/cse-setup-old/lockfiles.jpg)
 1. Close and reopen VS Code.
 
 Congrats! You're now safer from nefarious hackers, or inadvertent intruders.
@@ -70,10 +73,10 @@ Note: If you're coming here from the older version of my guide, please switch to
 ### Part 3: Logging in
 1. **Open the Remote-SSH menu.** This can be done by clicking this button
 
-   ![SSH Icon](/assets/images/blog/cse-setup/ssh-icon.jpg) 
+   ![SSH Icon](/assets/images/blog/cse-setup-old/ssh-icon.jpg) 
    in the bottom left. The menu should look like this:
 
-   ![SSH menu](/assets/images/blog/cse-setup/ssh-menu.jpg)
+   ![SSH menu](/assets/images/blog/cse-setup-old/ssh-menu.jpg)
 1. **Click Connect to Host.** In the field that shows up, type in `z5555555@vscode.cse.unsw.edu.au`, using your zID instead. Hit <kbd>Enter</kbd>.
     A new window will open.
 1. **If asked to select a remote platform**, select Linux.
@@ -84,7 +87,7 @@ Note: If you're coming here from the older version of my guide, please switch to
 1. **We can save some time by adding this to our hosts list.** Click the SSH icon in the bottom left again, click Connect to Host, and this time, click **Add New SSH Host.**
 1. **Enter the following command:** `ssh z5555555@vscode.cse.unsw.edu.au`, replacing with your own zID again, and hit <kbd>Enter</kbd>. If prompted which configuration file to save to, select the first one.
 1. **You should now see vscode.cse.unsw.edu.au on the Connect to Host menu.** This means you don't have to type it in each time.
-    ![SSH menu](/assets/images/blog/cse-setup/ssh-menu-2.jpg)
+    ![SSH menu](/assets/images/blog/cse-setup-old/ssh-menu-2.jpg)
 If you had an issue, scroll down to [troubleshooting](#troubleshooting){: .page-anchor-offset} section.
 
 ### Part 4: vscode2 - Electric Boogaloo
@@ -99,7 +102,7 @@ You can connect to `mandolin` if `corelli` ever feels slow, which it might durin
 
 ## Making VS Code even cooler
 
-![My VS Code over SSH](/assets/images/blog/cse-setup/vscode.jpg)
+![My VS Code over SSH](/assets/images/blog/cse-setup-old/vscode.jpg)
 
 ### Editor rulers
 The COMP1511 style guide requires you to make sure your lines of code aren't longer than 80 characters (and it's good practice to do so!). You can make VS Code show a handy little ruler to make sure your lines aren't too long.
