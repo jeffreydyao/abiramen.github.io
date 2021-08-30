@@ -1,7 +1,7 @@
 ---
-permalink: /cse-setup-old
-short: cse-setup-old
-title: CSE and VS Code (old)
+permalink: /cse-setup-legacy
+short: cse-setup-legacy
+title: CSE and VS Code (legacy)
 time: 13 April 2020
 last-update: 28 August 2021
 layout: post
@@ -10,7 +10,7 @@ desc: This is now what we call a /bad idea/. Check out the new version of this p
 ---
 
 {: .alert .alert-red}
-This method is now considered unreliable (especially during exam periods) due to the load it places on CSE servers, and will likely become unsupported by CSE eventually. Check out [this newer post](/cse-setup) instead.
+This method is now considered unreliable (especially during exam periods) due to the load it places on CSE servers. Check out [this newer post](/cse-setup) instead.
 
 Hi there! If you're new here, welcome to CSE! We're going to be setting up a text editor called Visual Studio Code, or VS Code, to remotely work on the CSE computers without needing a VNC client!
 
