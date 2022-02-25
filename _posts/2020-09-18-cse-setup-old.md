@@ -6,7 +6,7 @@ time: 13 April 2020
 last-update: 28 August 2021
 layout: post
 tags: unsw-cse guide vscode
-desc: This is now what we call a /bad idea/. Check out the new version of this post instead!
+desc: This is now what we call a /bad/ idea. Check out the new version of this post instead!
 ---
 
 {: .alert .alert-red}
