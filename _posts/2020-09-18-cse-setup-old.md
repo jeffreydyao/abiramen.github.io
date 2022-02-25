@@ -10,7 +10,7 @@ desc: This is now what we call a /bad/ idea. Check out the new version of this p
 ---
 
 {: .alert .alert-red}
-This method is now considered unreliable (especially during exam periods) due to the load it places on CSE servers. Check out [this newer post](/cse-setup) instead.
+**WARNING** This method is now considered unreliable due to the load it places on CSE servers, and may be blocked by CSE's System Support at any time. Check out [this newer post](/cse-setup) instead.
 
 Hi there! If you're new here, welcome to CSE! We're going to be setting up a text editor called Visual Studio Code, or VS Code, to remotely work on the CSE computers without needing a VNC client!
 
