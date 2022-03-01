@@ -31,7 +31,7 @@ const typewrite = () => {
     }
 
     if ($('#splash-line2-hidden').innerHTML.length == 0) {
-        $('#splash-line2').innerHTML = "// i write ctfs with the <a href='https://unswsecurity.com' target='_blank'>unsw security society</a> for fun :)";
+        $('#splash-line2').innerHTML = "// i do stuff with the <a href='https://unswsecurity.com' target='_blank'>unsw security society</a> for fun :)";
     }
 
     
